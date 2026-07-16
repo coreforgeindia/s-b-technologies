@@ -1,5 +1,7 @@
 // Cloudflare Pages Function for /api/contact
 // Uses Cloudflare Workers TCP sockets to send email via Gmail SMTP
+import { connect } from 'cloudflare:sockets';
+
 
 const INTEREST_MAP: Record<string, string> = {
   smt: 'SMT Assembly',
