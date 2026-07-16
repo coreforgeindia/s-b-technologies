@@ -7,7 +7,7 @@ import {
   ShieldCheck, Briefcase, FileText, HelpCircle, PhoneCall, Factory, ArrowRight
 } from "lucide-react";
 import { useState, useEffect } from "react";
-import logoUrl from "@/assets/logo.png";
+const logoUrl = "/logo.bmp";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
