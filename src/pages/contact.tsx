@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Phone, Mail, CheckCircle2 } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -23,6 +24,7 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
@@ -36,12 +38,42 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(data: ContactFormValues) {
-    console.log("Form data:", data);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitted(true);
-    }, 500);
+  async function onSubmit(data: ContactFormValues) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setIsSubmitted(true);
+        toast({
+          title: "Inquiry Sent Successfully",
+          description: "A quote confirmation email has been sent.",
+        });
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Error Sending Request",
+          description: result.error || "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast({
+        variant: "destructive",
+        title: "Network Error",
+        description: "Could not connect to the server. Please check your internet connection.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -230,8 +262,12 @@ export default function Contact() {
                         )}
                       />
 
-                      <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-bold h-12 text-base mt-2">
-                        Submit Request
+                      <Button 
+                        type="submit" 
+                        disabled={isSubmitting}
+                        className="w-full bg-primary hover:bg-primary/90 text-white font-bold h-12 text-base mt-2"
+                      >
+                        {isSubmitting ? "Submitting Request..." : "Submit Request"}
                       </Button>
                     </form>
                   </Form>
