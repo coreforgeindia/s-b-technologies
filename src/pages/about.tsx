@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { Shield, Cog, CheckCircle, Target, Factory, PenTool, Truck } from "lucide-react";
 import { qualityStandards, keyStrengths, companyInfo } from "@/data/content";
+import { useCompanyProfile } from "@/hooks/use-content";
 
 export default function About() {
+  const { profile } = useCompanyProfile();
+  const established = profile?.established || companyInfo.established;
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -19,7 +22,7 @@ export default function About() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <motion.h1 initial="hidden" animate="visible" variants={fadeIn} className="text-4xl md:text-6xl font-bold text-white mb-6">About Us</motion.h1>
           <motion.p initial="hidden" animate="visible" variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.1 } } }} className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            Established in {companyInfo.established}, S.B. Technologies is an IPC-A-610 compliant Electronics Manufacturing Services (EMS) provider known for precision assembly, dependable quality, and global service.
+            Established in {established}, S.B. Technologies is an IPC-A-610 compliant Electronics Manufacturing Services (EMS) provider known for precision assembly, dependable quality, and global service.
           </motion.p>
         </div>
       </section>

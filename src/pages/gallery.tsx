@@ -1,54 +1,19 @@
 import { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Images } from "lucide-react";
-
-import p1 from "@/assets/products/power-distribution-transformer.png";
-import p2 from "@/assets/products/dry-type-transformer.png";
-import p3 from "@/assets/products/dry-type-transformer-alt.png";
-import p4 from "@/assets/products/booster-transformer.png";
-import p5 from "@/assets/products/isolation-transformer.png";
-import p6 from "@/assets/products/special-type-transformer.png";
-import p7 from "@/assets/products/spm-fabrication.png";
-import p8 from "@/assets/products/product-range-collage.png";
-
-import c1 from "@/assets/construction/core-construction.png";
-import c2 from "@/assets/construction/windings.png";
-import c3 from "@/assets/construction/tank-fabrication.png";
-import c4 from "@/assets/construction/terminations.png";
-import c5 from "@/assets/construction/insulation.png";
-import c6 from "@/assets/construction/accessories.png";
-
-type GalleryItem = {
-  id: string;
-  src: string;
-  title: string;
-  category: "Products" | "Manufacturing";
-};
-
-const galleryData: GalleryItem[] = [
-  { id: "g1", src: p1, title: "SMT Assembly Line", category: "Products" },
-  { id: "g2", src: p2, title: "PCB Assembly Station", category: "Products" },
-  { id: "g3", src: p3, title: "Multi-Layer PCB Board", category: "Products" },
-  { id: "g4", src: p4, title: "Reflow Soldering Oven", category: "Products" },
-  { id: "g5", src: p5, title: "Wave Soldering System", category: "Products" },
-  { id: "g6", src: p6, title: "BGA / QFP Assembly", category: "Products" },
-  { id: "g7", src: p7, title: "PCB CAD Design", category: "Manufacturing" },
-  { id: "g8", src: p8, title: "Product Range Overview", category: "Products" },
-  { id: "g9", src: c1, title: "Solder Paste Printing", category: "Manufacturing" },
-  { id: "g10", src: c2, title: "Pick & Place Operation", category: "Manufacturing" },
-  { id: "g11", src: c3, title: "Reflow Profile Setup", category: "Manufacturing" },
-  { id: "g12", src: c4, title: "AOI Inspection", category: "Manufacturing" },
-  { id: "g13", src: c5, title: "X-Ray Inspection", category: "Manufacturing" },
-  { id: "g14", src: c6, title: "Component Storage & Handling", category: "Manufacturing" }
-];
+import { useGalleryItems } from "@/hooks/use-content";
 
 export default function Gallery() {
-  const [filter, setFilter] = useState<"All" | "Products" | "Manufacturing">("All");
+  const { items: galleryItems, loading } = useGalleryItems();
+  const [filter, setFilter] = useState<string>("All");
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
 
+  // Get unique categories from data
+  const categories = ["All", ...Array.from(new Set(galleryItems.map(item => item.category)))];
+
   const filteredItems = filter === "All" 
-    ? galleryData 
-    : galleryData.filter(item => item.category === filter);
+    ? galleryItems 
+    : galleryItems.filter(item => item.category === filter);
 
   const handleNext = useCallback(() => {
     if (selectedIdx !== null) {
@@ -109,7 +74,7 @@ export default function Gallery() {
         <div className="container mx-auto px-4 md:px-8">
           {/* Filters */}
           <div className="flex justify-center gap-3 mb-12">
-            {(["All", "Products", "Manufacturing"] as const).map(cat => (
+            {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => { setFilter(cat); setSelectedIdx(null); }}
@@ -124,38 +89,59 @@ export default function Gallery() {
             ))}
           </div>
 
-          {/* Masonry Grid */}
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {filteredItems.map((item, idx) => (
-              <motion.div 
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: (idx % 10) * 0.05 }}
-                className="break-inside-avoid relative rounded-2xl overflow-hidden group cursor-pointer bg-white border border-zinc-200 shadow-sm"
-                onClick={() => setSelectedIdx(idx)}
-              >
-                <div className="bg-zinc-100 flex items-center justify-center p-4 min-h-[200px]">
-                  <img 
-                    src={item.src} 
-                    alt={item.title} 
-                    className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <h3 className="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{item.title}</h3>
-                  <p className="text-primary text-sm font-semibold translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">{item.category}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {loading ? (
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+              {Array.from({ length: 9 }).map((_, i) => (
+                <div key={i} className="break-inside-avoid rounded-2xl bg-zinc-200 animate-pulse" style={{ height: `${200 + (i % 3) * 60}px` }} />
+              ))}
+            </div>
+          ) : filteredItems.length === 0 ? (
+            <div className="text-center py-24 text-zinc-400">
+              <Images size={48} className="mx-auto mb-4" />
+              <p className="text-lg font-semibold">No gallery images yet</p>
+              <p className="text-sm mt-2">Add images through the admin dashboard</p>
+            </div>
+          ) : (
+            /* Masonry Grid */
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+              {filteredItems.map((item, idx) => (
+                <motion.div 
+                  key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: (idx % 10) * 0.05 }}
+                  className="break-inside-avoid relative rounded-2xl overflow-hidden group cursor-pointer bg-white border border-zinc-200 shadow-sm"
+                  onClick={() => setSelectedIdx(idx)}
+                >
+                  <div className="bg-zinc-100 flex items-center justify-center p-4 min-h-[200px]">
+                    {item.image_url ? (
+                      <img 
+                        src={item.image_url} 
+                        alt={item.title} 
+                        className="w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="text-center text-zinc-400 py-8">
+                        <Images size={40} className="mx-auto mb-2" />
+                        <p className="text-sm font-bold">{item.title}</p>
+                      </div>
+                    )}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h3 className="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{item.title}</h3>
+                    <p className="text-primary text-sm font-semibold translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">{item.category}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
       {/* Lightbox */}
       <AnimatePresence>
-        {selectedIdx !== null && (
+        {selectedIdx !== null && filteredItems[selectedIdx] && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -187,16 +173,23 @@ export default function Gallery() {
 
             {/* Content */}
             <div className="w-full max-w-5xl max-h-[85vh] p-4 flex flex-col items-center justify-center" onClick={handleClose}>
-              <motion.img 
-                key={selectedIdx}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3 }}
-                src={filteredItems[selectedIdx].src} 
-                alt={filteredItems[selectedIdx].title} 
-                className="max-w-full max-h-[75vh] object-contain drop-shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
-              />
+              {filteredItems[selectedIdx].image_url ? (
+                <motion.img 
+                  key={selectedIdx}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                  src={filteredItems[selectedIdx].image_url} 
+                  alt={filteredItems[selectedIdx].title} 
+                  className="max-w-full max-h-[75vh] object-contain drop-shadow-2xl"
+                  onClick={(e) => e.stopPropagation()}
+                />
+              ) : (
+                <div className="text-center text-zinc-500">
+                  <Images size={64} className="mx-auto mb-4" />
+                  <p className="text-lg font-bold">No image available</p>
+                </div>
+              )}
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}

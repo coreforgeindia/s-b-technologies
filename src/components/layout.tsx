@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { companyInfo } from "@/data/content";
+import { useCompanyProfile } from "@/hooks/use-content";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { 
@@ -13,6 +14,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { profile } = useCompanyProfile();
+
+  // Dynamic data from Supabase with static fallback
+  const footerInfo = {
+    address: profile?.address || companyInfo.address,
+    phones: profile?.phones || companyInfo.phones,
+    email: profile?.email || companyInfo.email,
+    certifications: profile?.certifications || companyInfo.certifications,
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -38,13 +48,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
       >
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <img src={logoUrl} alt={companyInfo.name} className="h-10 w-10 object-contain" />
+            <img src={logoUrl} alt={profile?.name || companyInfo.name} className="h-10 w-10 object-contain" />
             <div className="flex flex-col">
               <span className="font-extrabold text-sm md:text-base leading-tight tracking-tight text-navy uppercase">
-                S.B. TECHNOLOGIES
+                {profile?.name || companyInfo.name}
               </span>
               <span className="text-[8px] font-bold text-primary uppercase tracking-widest leading-none">
-                ELECTRONICS MANUFACTURING SERVICES
+                {profile?.tagline || companyInfo.tagline}
               </span>
             </div>
           </Link>
@@ -126,13 +136,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3 bg-white p-4 rounded-2xl w-max shadow-md">
-              <img src={logoUrl} alt={companyInfo.name} className="h-12 w-12 object-contain" />
+              <img src={logoUrl} alt={profile?.name || companyInfo.name} className="h-12 w-12 object-contain" />
               <div className="flex flex-col">
                 <span className="font-extrabold text-sm leading-tight tracking-tight text-zinc-900">
-                  S.B. TECHNOLOGIES
+                  {profile?.name || companyInfo.name}
                 </span>
                 <span className="text-[8px] font-bold text-primary uppercase tracking-widest leading-none">
-                  ELECTRONICS MANUFACTURING SERVICES
+                  {profile?.tagline || companyInfo.tagline}
                 </span>
               </div>
             </Link>
@@ -162,17 +172,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <ul className="space-y-4 text-zinc-400 text-sm font-semibold">
               <li className="flex gap-3">
                 <MapPin className="text-primary mt-0.5 flex-shrink-0" size={16} />
-                <span className="leading-relaxed">{companyInfo.address}</span>
+                <span className="leading-relaxed">{footerInfo.address}</span>
               </li>
               <li className="flex gap-3">
                 <Phone className="text-primary mt-0.5 flex-shrink-0" size={16} />
                 <span className="flex flex-col gap-0.5">
-                  {companyInfo.phones.map(p => <span key={p}>{p}</span>)}
+                  {footerInfo.phones.map(p => <span key={p}>{p}</span>)}
                 </span>
               </li>
               <li className="flex gap-3">
                 <Mail className="text-primary mt-0.5 flex-shrink-0" size={16} />
-                <span>{companyInfo.email}</span>
+                <span>{footerInfo.email}</span>
               </li>
             </ul>
           </div>
@@ -180,7 +190,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h4 className="text-sm font-extrabold mb-6 text-white uppercase tracking-wider">Certifications</h4>
             <div className="flex flex-wrap gap-2.5">
-              {companyInfo.certifications.map(cert => (
+              {footerInfo.certifications.map(cert => (
                 <div key={cert} className="bg-zinc-900 border border-zinc-800 px-3.5 py-2 rounded-xl text-xs font-bold text-zinc-300">
                   {cert}
                 </div>
@@ -190,7 +200,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </div>
         
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 mt-16 pt-8 border-t border-zinc-900 text-center text-zinc-500 text-xs font-bold uppercase tracking-wider">
-          &copy; {new Date().getFullYear()} S.B. TECHNOLOGIES. All rights reserved.
+          &copy; {new Date().getFullYear()} {profile?.name || companyInfo.name}. All rights reserved.
         </div>
       </footer>
     </div>

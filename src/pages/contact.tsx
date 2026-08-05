@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { companyInfo } from "@/data/content";
+import { useCompanyProfile } from "@/hooks/use-content";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -25,6 +26,14 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { profile } = useCompanyProfile();
+
+  // Use Supabase profile data if available, otherwise static
+  const contactInfo = {
+    address: profile?.address || companyInfo.address,
+    phones: profile?.phones || companyInfo.phones,
+    email: profile?.email || companyInfo.email,
+  };
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
@@ -105,7 +114,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Factory & Office</h4>
-                    <p className="text-zinc-600 leading-relaxed max-w-xs">{companyInfo.address}</p>
+                    <p className="text-zinc-600 leading-relaxed max-w-xs">{contactInfo.address}</p>
                   </div>
                 </div>
 
@@ -115,7 +124,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Phone</h4>
-                    {companyInfo.phones.map(phone => (
+                    {contactInfo.phones.map(phone => (
                       <p key={phone} className="text-zinc-600">{phone}</p>
                     ))}
                   </div>
@@ -127,7 +136,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Email</h4>
-                    <p className="text-zinc-600">{companyInfo.email}</p>
+                    <p className="text-zinc-600">{contactInfo.email}</p>
                   </div>
                 </div>
               </div>

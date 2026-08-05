@@ -17,6 +17,16 @@ import FAQs from "@/pages/faqs";
 import Contact from "@/pages/contact";
 import { Layout } from "@/components/layout";
 
+// Admin imports
+import AdminLogin from "@/pages/admin/login";
+import AdminDashboard from "@/pages/admin/dashboard";
+import AdminProducts from "@/pages/admin/products";
+import AdminGallery from "@/pages/admin/gallery";
+import AdminProjects from "@/pages/admin/projects";
+import AdminProfile from "@/pages/admin/profile";
+import AdminLogs from "@/pages/admin/logs";
+import { AdminAuthProvider, AdminAuthGuard, AdminLayout } from "@/components/admin-layout";
+
 const queryClient = new QueryClient();
 
 function ScrollToTop() {
@@ -50,13 +60,77 @@ function Router() {
   );
 }
 
+function AdminRouter() {
+  return (
+    <AdminAuthProvider>
+      <Switch>
+        {/* Login page - no auth guard */}
+        <Route path="/admin">
+          <AdminLogin />
+        </Route>
+
+        {/* Protected admin pages */}
+        <Route path="/admin/dashboard">
+          <AdminAuthGuard>
+            <AdminLayout>
+              <AdminDashboard />
+            </AdminLayout>
+          </AdminAuthGuard>
+        </Route>
+        <Route path="/admin/products">
+          <AdminAuthGuard>
+            <AdminLayout>
+              <AdminProducts />
+            </AdminLayout>
+          </AdminAuthGuard>
+        </Route>
+        <Route path="/admin/gallery">
+          <AdminAuthGuard>
+            <AdminLayout>
+              <AdminGallery />
+            </AdminLayout>
+          </AdminAuthGuard>
+        </Route>
+        <Route path="/admin/projects">
+          <AdminAuthGuard>
+            <AdminLayout>
+              <AdminProjects />
+            </AdminLayout>
+          </AdminAuthGuard>
+        </Route>
+        <Route path="/admin/profile">
+          <AdminAuthGuard>
+            <AdminLayout>
+              <AdminProfile />
+            </AdminLayout>
+          </AdminAuthGuard>
+        </Route>
+        <Route path="/admin/logs">
+          <AdminAuthGuard>
+            <AdminLayout>
+              <AdminLogs />
+            </AdminLayout>
+          </AdminAuthGuard>
+        </Route>
+      </Switch>
+    </AdminAuthProvider>
+  );
+}
+
 function App() {
+  const [location] = useLocation();
+  const isAdmin = location.startsWith("/admin");
+
+  return isAdmin ? <AdminRouter /> : <Router />;
+}
+
+function AppWrapper() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <ScrollToTop />
-          <Router />
+          <App />
         </WouterRouter>
         <Toaster />
       </TooltipProvider>
@@ -64,4 +138,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppWrapper;

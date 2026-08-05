@@ -1,12 +1,21 @@
 import { useParams, Link } from "wouter";
-import { products } from "@/data/content";
+import { useProducts } from "@/hooks/use-content";
 import { motion } from "framer-motion";
-import { Check, ArrowLeft, ArrowRight } from "lucide-react";
+import { Check, ArrowLeft, ArrowRight, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ProductDetail() {
   const { id } = useParams();
+  const { products, loading } = useProducts();
   const product = products.find((p) => p.id === id);
+
+  if (loading) {
+    return (
+      <div className="min-h-[70vh] flex items-center justify-center bg-zinc-50">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary" />
+      </div>
+    );
+  }
 
   if (!product) {
     return (
@@ -39,11 +48,18 @@ export default function ProductDetail() {
               className="w-full lg:w-1/2"
             >
               <div className="bg-zinc-950 rounded-3xl p-8 md:p-16 border-4 border-zinc-900 shadow-2xl flex items-center justify-center min-h-[400px]">
-                <img 
-                  src={product.image} 
-                  alt={product.title} 
-                  className="w-full h-full max-h-[500px] object-contain drop-shadow-2xl"
-                />
+                {product.image_url ? (
+                  <img 
+                    src={product.image_url} 
+                    alt={product.title} 
+                    className="w-full h-full max-h-[500px] object-contain drop-shadow-2xl"
+                  />
+                ) : (
+                  <div className="text-center text-zinc-600">
+                    <Zap size={80} className="mx-auto mb-4" />
+                    <p className="text-lg font-bold">{product.title}</p>
+                  </div>
+                )}
               </div>
             </motion.div>
             
@@ -62,7 +78,7 @@ export default function ProductDetail() {
               <div className="bg-white p-6 rounded-2xl border border-zinc-100 shadow-sm mb-10">
                 <h3 className="font-bold text-lg mb-4 text-zinc-900">Key Features</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {product.features.map((feature, i) => (
+                  {(product.features || []).map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-primary flex-shrink-0" />
                       <span className="text-zinc-700 font-medium">{feature}</span>
@@ -70,6 +86,21 @@ export default function ProductDetail() {
                   ))}
                 </ul>
               </div>
+
+              {/* Applications */}
+              {product.applications && product.applications.length > 0 && (
+                <div className="bg-zinc-50 p-6 rounded-2xl border border-zinc-100 mb-10">
+                  <h3 className="font-bold text-lg mb-4 text-zinc-900">Applications</h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {product.applications.map((app, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                        <span className="text-zinc-700 font-medium">{app}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               
               <Link href="/contact">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 w-full sm:w-auto shadow-lg shadow-primary/20">
@@ -98,8 +129,8 @@ export default function ProductDetail() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      {product.gallery && product.gallery.length > 0 && (
+      {/* Gallery Section - from Supabase gallery JSONB */}
+      {product.gallery && product.gallery.length > 0 && product.gallery.some(g => g.url) && (
         <section className="py-20 bg-zinc-950 text-white border-t-4 border-primary">
           <div className="container mx-auto px-4 md:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -108,7 +139,7 @@ export default function ProductDetail() {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {product.gallery.map((img, i) => (
+              {product.gallery.filter(g => g.url).map((img, i) => (
                 <motion.div 
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
