@@ -247,8 +247,8 @@ export function AdminLayout({ children }: { children: ReactNode }) {
           {/* Logo */}
           <div className="p-6 border-b border-zinc-800 flex-shrink-0">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-extrabold text-sm shadow-lg shadow-primary/20">
-                SB
+              <div className="w-10 h-10 rounded-xl bg-white p-1 flex items-center justify-center shadow-lg shadow-primary/20 overflow-hidden flex-shrink-0">
+                <img src="/logo.png" alt="S.B. Technologies" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h2 className="text-white font-bold text-sm">S.B. Technologies</h2>

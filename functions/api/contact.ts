@@ -57,7 +57,7 @@ const EMAIL_TEMPLATE = `<!DOCTYPE html>
                         </td>
                         <td style="vertical-align: middle; text-align: left;">
                           <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 800; color: #ffffff; letter-spacing: 1px; line-height: 1.1; text-transform: uppercase;">S.B. Technologies</div>
-                          <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 8px; font-weight: 600; color: #a5d3f5; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px;">Electronics Manufacturing Services</div>
+                          <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 8px; font-weight: 600; color: #a5d3f5; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px;">Implementing Technology</div>
                         </td>
                       </tr>
                     </table>
@@ -118,7 +118,7 @@ const EMAIL_TEMPLATE = `<!DOCTYPE html>
           <tr>
             <td style="background-color: #f8fafc; padding: 25px 40px; border-top: 1px solid #eef2f5; border-bottom: 6px solid #0f2e5a; text-align: center;" class="content-padding">
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr><td align="center" style="font-size: 12px; color: #718096; line-height: 1.8;"><strong>S.B. Technologies</strong><br>Factory &amp; Office: #4, 9th Main, J.C. Industrial Estate, Kanakapura Main Road,<br>Bangalore – 560062, Karnataka, India<br>Phone: 080-26662994 / 9845779326 | Email: <a href="mailto:info@sbtechindia.com" style="color: #0082c8; text-decoration: none; font-weight: 600;">info@sbtechindia.com</a></td></tr>
+                <tr><td align="center" style="font-size: 12px; color: #718096; line-height: 1.8;"><strong>S.B. Technologies</strong><br>Factory &amp; Office: #4, 9th Main, J.C. Industrial Estate, Kanakapura Main Road,<br>Bangalore – 560062, Karnataka, India<br>Phone: +91 98457 79326 | WhatsApp: +91 73537 75422 | Email: <a href="mailto:info@sbtechindia.com" style="color: #0082c8; text-decoration: none; font-weight: 600;">info@sbtechindia.com</a></td></tr>
                 <tr><td align="center" style="padding-top: 15px; font-size: 11px; color: #a0aec0;">You are receiving this email because you submitted an inquiry on our website.</td></tr>
               </table>
             </td>
@@ -222,8 +222,8 @@ async function sendSmtpEmail(
     // QUIT
     await sendCommand('QUIT');
   } finally {
-    try { writer.close(); } catch (_) {}
-    try { reader.cancel(); } catch (_) {}
+    try { writer.close(); } catch (_) { }
+    try { reader.cancel(); } catch (_) { }
     socket.close();
   }
 }

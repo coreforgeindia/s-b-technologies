@@ -93,7 +93,7 @@ export default function Industries() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Industries We Serve</h1>
           <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            Delivering precision PCB assemblies and electronics manufacturing services for critical sectors worldwide.
+            Delivering precision PCB assemblies and Implementing Technology for critical sectors worldwide.
           </p>
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function Industries() {
               // Dynamically resolve icon from Lucide React
               // @ts-ignore
               const IconComponent = Icons[ind.icon] || Icons.HelpCircle;
-              
+
               return (
                 <motion.div
                   key={ind.id}
@@ -125,10 +125,10 @@ export default function Industries() {
                   className="bg-white rounded-2xl overflow-hidden border border-zinc-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group"
                 >
                   <div className="h-48 overflow-hidden relative">
-                    <img 
-                      src={ind.image} 
-                      alt={ind.name} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    <img
+                      src={ind.image}
+                      alt={ind.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 to-transparent" />
                     <div className="absolute bottom-4 left-6 flex items-center gap-3">

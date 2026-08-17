@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS gallery_items (
 CREATE TABLE IF NOT EXISTS company_profile (
   id TEXT PRIMARY KEY DEFAULT 'main',
   name TEXT NOT NULL DEFAULT 'S.B. TECHNOLOGIES',
-  tagline TEXT NOT NULL DEFAULT 'ELECTRONICS MANUFACTURING SERVICES',
+  tagline TEXT NOT NULL DEFAULT 'Implementing Technology',
   established INT NOT NULL DEFAULT 1995,
   certifications TEXT[] NOT NULL DEFAULT '{}',
   phones TEXT[] NOT NULL DEFAULT '{}',
@@ -272,7 +272,7 @@ INSERT INTO products (id, title, description, detail, image_url, features, appli
 (
   'smt-assembly',
   'SMT Assembly',
-  'High-precision Surface Mount Technology assembly with 0201/0402 chip placement capability using advanced JUKI pick-and-place machines.',
+  'High-precision Surface Mount Technology assembly with 0603 chip placement capability using advanced JUKI pick-and-place machines.',
   'Our SMT Assembly line is built around industry-leading JUKI automated pick-and-place machines capable of placing components as small as 0201 and 0402 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defects, and rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.',
   '',
   ARRAY['0201/0402 chip placement', 'JUKI automated machines', 'High-speed production', 'In-line AOI inspection'],
@@ -406,10 +406,10 @@ INSERT INTO company_profile (id, name, tagline, established, certifications, pho
 (
   'main',
   'S.B. TECHNOLOGIES',
-  'ELECTRONICS MANUFACTURING SERVICES',
+  'Implementing Technology',
   1995,
   ARRAY['IPC-A-610 Compliant'],
-  ARRAY['080-26662994', '9845779326'],
+  ARRAY['+91 98457 79326', '+91 73537 75422'],
   'info@sbtechindia.com',
   'www.sbtechindia.com',
   '#4, 9th Main, J.C. Industrial Estate, Kanakapura Main Road, Bangalore – 560062, Karnataka, India',

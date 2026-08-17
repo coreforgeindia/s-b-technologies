@@ -31,10 +31,11 @@ import c6 from "@/assets/construction/accessories.png";
 
 export const companyInfo = {
   name: "S.B. TECHNOLOGIES",
-  tagline: "ELECTRONICS MANUFACTURING SERVICES",
+  tagline: "Implementing Technology",
   established: 1995,
   certifications: ["IPC-A-610 Compliant"],
-  phones: ["080-26662994", "9845779326"],
+  phones: ["+91 98457 79326", "+91 73537 75422"],
+  whatsapp: "+91 73537 75422",
   email: "info@sbtechindia.com",
   website: "www.sbtechindia.com",
   address: "#4, 9th Main, J.C. Industrial Estate, Kanakapura Main Road, Bangalore – 560062, Karnataka, India",
@@ -44,7 +45,7 @@ export const products = [
   {
     id: "smt-assembly",
     title: "SMT Assembly",
-    description: "High-precision Surface Mount Technology assembly with 0201/0402 chip placement capability using advanced JUKI pick-and-place machines.",
+    description: "High-precision Surface Mount Technology assembly with 0603 chip placement capability using advanced JUKI pick-and-place machines.",
     detail: "Our SMT Assembly line is built around industry-leading JUKI automated pick-and-place machines capable of placing components as small as 0201 and 0402 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defects, and rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.",
     image: smtAssemblyImage,
     gallery: [

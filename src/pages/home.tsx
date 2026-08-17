@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { 
-  ArrowRight, CheckCircle2, ShieldCheck, Factory, Zap, 
+import {
+  ArrowRight, CheckCircle2, ShieldCheck, Factory, Zap,
   Settings, Users, Briefcase, HelpCircle, MessageSquare, ChevronDown, MapPin
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -47,7 +47,7 @@ export default function Home() {
 
   // Dynamic company info
   const companyName = profile?.name || 'S.B. TECHNOLOGIES';
-  const companyTagline = profile?.tagline || 'ELECTRONICS MANUFACTURING SERVICES';
+  const companyTagline = profile?.tagline || 'Implementing Technology';
 
   // Loading skeleton for cards
   const CardSkeleton = () => (
@@ -63,9 +63,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full bg-white font-sans">
-      
+
       {/* 1. Hero Section */}
-      <section 
+      <section
         className="relative min-h-[100vh] flex items-end pb-24 justify-center overflow-hidden bg-zinc-950 border-b border-zinc-900"
         style={{
           backgroundImage: `url(${heroBg})`,
@@ -77,36 +77,36 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-10" />
         </div>
-        
+
         <div className="max-w-[1280px] w-full relative z-10 px-4 md:px-8 mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
             className="max-w-4xl text-left"
           >
-            <motion.span 
-              variants={fadeIn} 
+            <motion.span
+              variants={fadeIn}
               className="inline-block px-3.5 py-1.5 bg-primary/10 border border-primary/20 text-primary font-bold text-xs uppercase tracking-widest rounded-full mb-6"
             >
               IPC-A-610 Compliant
             </motion.span>
-            
-            <motion.h1 
-              variants={fadeIn} 
+
+            <motion.h1
+              variants={fadeIn}
               className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight uppercase font-display"
             >
               {companyName} <br />
               <span className="text-primary text-3xl sm:text-4xl md:text-5xl">{companyTagline}</span>
             </motion.h1>
-            
-            <motion.p 
-              variants={fadeIn} 
+
+            <motion.p
+              variants={fadeIn}
               className="text-lg md:text-xl text-zinc-300 mb-10 max-w-2xl leading-relaxed"
             >
               Delivering Precision PCB Assembly, SMT Soldering, Through-Hole Assembly, and CAD/CAM Design Services to Clients Across the Globe.
             </motion.p>
-            
+
             <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
               <Link href="/products">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-base shadow-xl shadow-primary/20 rounded-xl">
@@ -121,14 +121,14 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
-        
+
         {/* Scroll Indicator */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:block">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-            <motion.div 
+            <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="w-1.5 h-1.5 bg-primary rounded-full" 
+              className="w-1.5 h-1.5 bg-primary rounded-full"
             />
           </div>
         </div>
@@ -143,10 +143,10 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-navy">Who We Are</h2>
               <div className="h-1 w-20 bg-primary"></div>
               <p className="text-zinc-600 text-lg leading-relaxed">
-                {companyName} is a Bangalore-based Electronics Manufacturing Services (EMS) provider offering PCB manufacturing, automated reflow soldering, through-hole and SMD technology assembly, and PCB CAD/CAM design services to clients across the globe.
+                {companyName} is a Bangalore-based Implementing Technology (EMS) provider offering PCB manufacturing, automated reflow soldering, through-hole and SMD technology assembly, and PCB CAD/CAM design services to clients across the globe.
               </p>
               <p className="text-zinc-500 leading-relaxed text-sm">
-                With IPC-A-610 compliant processes, state-of-the-art JUKI pick-and-place machines, and multi-zone reflow ovens, we deliver consistent, high-quality assemblies from prototype to production volume.
+                With IPC-A-610 compliant processes, state-of-the-art PHILIPS pick-and-place machines, and multi-zone reflow ovens, we deliver consistent, high-quality assemblies from prototype to production volume.
               </p>
               <div className="pt-4">
                 <Link href="/about">
@@ -156,7 +156,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            
+
             <div className="lg:w-1/2 bg-zinc-50 p-8 rounded-3xl border border-zinc-100 flex flex-col justify-center space-y-6">
               <div className="flex gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
@@ -173,7 +173,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-bold text-navy text-lg mb-1">Advanced SMT Equipment</h4>
-                  <p className="text-zinc-600 text-sm">JUKI pick-and-place machines, multi-zone reflow ovens, and automated inspection systems.</p>
+                  <p className="text-zinc-600 text-sm">PHILIPS pick-and-place machines, multi-zone reflow ovens and Digital inspection systems</p>
                 </div>
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-navy">Quality & IPC Standards</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">
-                  All assemblies manufactured and inspected per IPC-A-610 Class 2 and Class 3 standards with AOI and X-ray verification.
+                  All assemblies manufactured and inspected as per IPC-A-610 Class 2 and Class 3 standards.
                 </p>
               </div>
               <Link href="/why-us" className="block mt-6">
@@ -478,7 +478,7 @@ export default function Home() {
               const isExpanded = expandedFaq === idx;
               return (
                 <div key={idx} className="border border-zinc-150 rounded-2xl bg-white overflow-hidden hover:border-primary/30 transition-colors">
-                  <button 
+                  <button
                     onClick={() => setExpandedFaq(isExpanded ? null : idx)}
                     className="w-full flex items-center justify-between p-6 text-left font-bold text-navy hover:bg-zinc-50/50 cursor-pointer text-sm sm:text-base"
                   >

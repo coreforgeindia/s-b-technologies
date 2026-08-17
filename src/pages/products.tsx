@@ -54,7 +54,7 @@ export default function Products() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Products & Services</h1>
           <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            Comprehensive PCB assembly and electronics manufacturing services engineered for precision, reliability, and rapid turnaround.
+            Comprehensive PCB assembly and Implementing Technology engineered for precision, reliability, and rapid turnaround.
           </p>
         </div>
       </section>
@@ -106,7 +106,7 @@ export default function Products() {
               Array.from({ length: 4 }).map((_, i) => <ProductSkeleton key={i} />)
             ) : (
               products.map((product) => (
-                <div 
+                <div
                   key={product.id}
                   className="bg-white rounded-3xl border border-zinc-150 overflow-hidden flex flex-col hover:shadow-xl hover:border-primary/40 transition-all duration-300 group"
                 >
@@ -227,7 +227,7 @@ export default function Products() {
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-3">Our Services</h2>
             <div className="h-1 w-20 bg-primary mb-4"></div>
             <p className="text-zinc-600 text-lg">
-              Beyond assembly, we offer end-to-end electronics manufacturing services — from prototype development to turnkey box-build production.
+              Beyond assembly, we offer end-to-end Implementing Technology — from prototype development to turnkey box-build production.
             </p>
           </div>
 

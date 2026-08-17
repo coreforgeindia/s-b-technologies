@@ -202,7 +202,17 @@ export function useCompanyProfile() {
           .single();
 
         if (!error && data) {
-          setProfile(data as CompanyProfile);
+          const p = data as CompanyProfile;
+          if (!p.tagline || p.tagline.toUpperCase().includes('ELECTRONICS MANUFACTURING SERVICES')) {
+            p.tagline = 'Implementing Technology';
+          }
+          if (p.phones) {
+            p.phones = p.phones.filter(ph => !ph.includes('26662994'));
+            if (!p.phones.some(ph => ph.includes('7353775422') || ph.includes('73537 75422'))) {
+              p.phones.push('+91 73537 75422');
+            }
+          }
+          setProfile(p);
         } else {
           setProfile({
             id: 'main',

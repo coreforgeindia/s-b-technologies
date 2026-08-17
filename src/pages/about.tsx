@@ -22,7 +22,7 @@ export default function About() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <motion.h1 initial="hidden" animate="visible" variants={fadeIn} className="text-4xl md:text-6xl font-bold text-white mb-6">About Us</motion.h1>
           <motion.p initial="hidden" animate="visible" variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.1 } } }} className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            Established in {established}, S.B. Technologies is an IPC-A-610 compliant Electronics Manufacturing Services (EMS) provider known for precision assembly, dependable quality, and global service.
+            Established in {established}, S.B. Technologies is an IPC-A-610 compliant Implementing Technology (EMS) provider known for precision assembly, dependable quality, and global service.
           </motion.p>
         </div>
       </section>
@@ -30,7 +30,7 @@ export default function About() {
       <section className="py-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row gap-16">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -41,7 +41,7 @@ export default function About() {
               </h2>
               <div className="prose prose-zinc max-w-none text-zinc-600 leading-relaxed text-lg space-y-6">
                 <p>
-                  Since our inception in 1995, S.B. TECHNOLOGIES has grown to become a trusted name in Electronics Manufacturing Services. Based in Bangalore, we specialize in PCB manufacturing, automated reflow soldering, through-hole and SMD technology assembly, and PCB CAD/CAM design services.
+                  Since our inception in 1995, S.B. TECHNOLOGIES has grown to become a trusted name in Implementing Technology. Based in Bangalore, we specialize in PCB manufacturing, automated reflow soldering, through-hole and SMD technology assembly, and PCB CAD/CAM design services.
                 </p>
                 <p>
                   With IPC-A-610 compliant processes and state-of-the-art equipment including JUKI pick-and-place machines, multi-zone reflow ovens, and wave soldering systems, we deliver consistent, high-quality assemblies. Our advanced AOI and X-ray inspection systems ensure zero-defect manufacturing.
@@ -51,8 +51,8 @@ export default function About() {
                 </p>
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -91,9 +91,9 @@ export default function About() {
               From solder paste printing to final inspection, our assembly pipeline is built for total reliability and zero-defect manufacturing.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -105,8 +105,8 @@ export default function About() {
                 Our in-house PCB CAD/CAM team reviews every design for manufacturability before production, catching issues early and optimizing for yield.
               </p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -119,8 +119,8 @@ export default function About() {
                 Automated pick-and-place with 0201 capability, multi-zone reflow, and wave soldering — all with in-line AOI and X-ray inspection.
               </p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -150,7 +150,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {qualityStandards.map((std, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}

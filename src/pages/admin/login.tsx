@@ -75,8 +75,8 @@ export default function AdminLogin() {
       <div className="relative z-10 w-full max-w-md">
         {/* Logo Section */}
         <div className="text-center mb-10">
-          <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-extrabold text-xl shadow-2xl shadow-primary/30 mb-6">
-            SB
+          <div className="w-20 h-20 mx-auto rounded-2xl bg-white p-2 flex items-center justify-center shadow-2xl shadow-primary/30 mb-6 overflow-hidden">
+            <img src="/logo.png" alt="S.B. Technologies" className="w-full h-full object-contain" />
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">Admin Panel</h1>
           <p className="text-zinc-500 text-sm font-medium">S.B. Technologies Management Console</p>
