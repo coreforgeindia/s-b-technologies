@@ -3,12 +3,12 @@ import { companyInfo } from "@/data/content";
 import { useCompanyProfile } from "@/hooks/use-content";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { 
-  Menu, X, Home, Building2, Package, Images, MapPin, Phone, Mail, 
+import {
+  Menu, X, Home, Building2, Package, Images, MapPin, Phone, Mail,
   ShieldCheck, Briefcase, FileText, HelpCircle, PhoneCall, Factory, ArrowRight
 } from "lucide-react";
 import { useState, useEffect } from "react";
-const logoUrl = "/logo.bmp";
+const logoUrl = "/logo.png";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -42,9 +42,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-primary/30 font-sans">
       <header
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md py-2 border-b border-zinc-100" : "bg-white py-4"
-        }`}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md py-2 border-b border-zinc-100" : "bg-white py-4"
+          }`}
       >
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
@@ -58,7 +57,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </span>
             </div>
           </Link>
-          
+
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => {
@@ -67,18 +66,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`flex items-center text-[13px] font-bold transition-all relative py-1.5 ${
-                    isActive 
-                      ? "text-primary font-extrabold" 
+                  className={`flex items-center text-[13px] font-bold transition-all relative py-1.5 ${isActive
+                      ? "text-primary font-extrabold"
                       : "text-zinc-600 hover:text-primary"
-                  }`}
+                    }`}
                 >
                   {link.icon}
                   <span>{link.label}</span>
                   {isActive && (
-                    <motion.div 
-                      layoutId="activeIndicator" 
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" 
+                    <motion.div
+                      layoutId="activeIndicator"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
                     />
                   )}
                 </Link>
@@ -110,11 +108,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center text-sm font-bold py-3.5 px-4 rounded-xl border border-transparent transition-all ${
-                    isActive 
-                      ? "bg-primary/5 border-primary/10 text-primary" 
+                  className={`flex items-center text-sm font-bold py-3.5 px-4 rounded-xl border border-transparent transition-all ${isActive
+                      ? "bg-primary/5 border-primary/10 text-primary"
                       : "text-zinc-700 hover:bg-zinc-50"
-                  }`}
+                    }`}
                 >
                   <span className="mr-3 text-zinc-500 group-hover:text-primary">{link.icon}</span>
                   {link.label}
@@ -154,16 +151,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h4 className="text-sm font-extrabold mb-6 text-white uppercase tracking-wider">Quick Links</h4>
             <ul className="grid grid-cols-2 gap-y-3 gap-x-4 text-zinc-400 text-sm font-semibold">
-              <li><Link href="/" className="hover:text-primary transition-colors flex items-center"><Home size={12} className="mr-1.5"/> Home</Link></li>
-              <li><Link href="/about" className="hover:text-primary transition-colors flex items-center"><Building2 size={12} className="mr-1.5"/> About Us</Link></li>
-              <li><Link href="/why-us" className="hover:text-primary transition-colors flex items-center"><ShieldCheck size={12} className="mr-1.5"/> Why Us</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors flex items-center"><Package size={12} className="mr-1.5"/> Products</Link></li>
-              <li><Link href="/industries" className="hover:text-primary transition-colors flex items-center"><Factory size={12} className="mr-1.5"/> Industries</Link></li>
-              <li><Link href="/projects" className="hover:text-primary transition-colors flex items-center"><Briefcase size={12} className="mr-1.5"/> Projects</Link></li>
-              <li><Link href="/gallery" className="hover:text-primary transition-colors flex items-center"><Images size={12} className="mr-1.5"/> Gallery</Link></li>
-              <li><Link href="/resources" className="hover:text-primary transition-colors flex items-center"><FileText size={12} className="mr-1.5"/> Resources</Link></li>
-              <li><Link href="/faqs" className="hover:text-primary transition-colors flex items-center"><HelpCircle size={12} className="mr-1.5"/> FAQs</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors flex items-center"><PhoneCall size={12} className="mr-1.5"/> Contact</Link></li>
+              <li><Link href="/" className="hover:text-primary transition-colors flex items-center"><Home size={12} className="mr-1.5" /> Home</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors flex items-center"><Building2 size={12} className="mr-1.5" /> About Us</Link></li>
+              <li><Link href="/why-us" className="hover:text-primary transition-colors flex items-center"><ShieldCheck size={12} className="mr-1.5" /> Why Us</Link></li>
+              <li><Link href="/products" className="hover:text-primary transition-colors flex items-center"><Package size={12} className="mr-1.5" /> Products</Link></li>
+              <li><Link href="/industries" className="hover:text-primary transition-colors flex items-center"><Factory size={12} className="mr-1.5" /> Industries</Link></li>
+              <li><Link href="/projects" className="hover:text-primary transition-colors flex items-center"><Briefcase size={12} className="mr-1.5" /> Projects</Link></li>
+              <li><Link href="/gallery" className="hover:text-primary transition-colors flex items-center"><Images size={12} className="mr-1.5" /> Gallery</Link></li>
+              <li><Link href="/resources" className="hover:text-primary transition-colors flex items-center"><FileText size={12} className="mr-1.5" /> Resources</Link></li>
+              <li><Link href="/faqs" className="hover:text-primary transition-colors flex items-center"><HelpCircle size={12} className="mr-1.5" /> FAQs</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors flex items-center"><PhoneCall size={12} className="mr-1.5" /> Contact</Link></li>
             </ul>
           </div>
 
@@ -198,7 +195,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
         </div>
-        
+
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 mt-16 pt-8 border-t border-zinc-900 text-center text-zinc-500 text-xs font-bold uppercase tracking-wider">
           &copy; {new Date().getFullYear()} {profile?.name || companyInfo.name}. All rights reserved.
         </div>
