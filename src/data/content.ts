@@ -173,7 +173,7 @@ export const qualityStandards = [
   },
   {
     title: "Inspection Systems",
-    description: "Automated Optical Inspection (AOI) and X-ray inspection for BGA and hidden-joint verification."
+    description: "Digital & Optical Inspection systems with High Skill work force ensures Final and Pre delivery inspection trouble free."
   },
   {
     title: "Process Control",
