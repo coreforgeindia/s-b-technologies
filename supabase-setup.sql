@@ -272,10 +272,10 @@ INSERT INTO products (id, title, description, detail, image_url, features, appli
 (
   'smt-assembly',
   'SMT Assembly',
-  'High-precision Surface Mount Technology assembly with 0603 chip placement capability using advanced JUKI pick-and-place machines.',
-  'Our SMT Assembly line is built around industry-leading JUKI automated pick-and-place machines capable of placing components as small as 0201 and 0402 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defects, and rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.',
+  'High-precision Surface Mount Technology assembly with 0603 chip placement capability using advanced YAMAHA pick-and-place machines.',
+  'Our SMT Assembly line is built around industry-leading YAMAHA automated pick-and-place machines capable of placing components as small as 0201 and 0402 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defects, and rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.',
   '',
-  ARRAY['0201/0402 chip placement', 'JUKI automated machines', 'High-speed production', 'In-line AOI inspection'],
+  ARRAY['0201/0402 chip placement', 'YAMAHA automated machines', 'High-speed production', 'In-line AOI inspection'],
   ARRAY['Telecom Infrastructure', 'Consumer Electronics', 'IoT Devices', 'Automotive ECUs'],
   '[{"url":"","caption":"Solder Paste Printing"},{"url":"","caption":"Pick & Place Operation"},{"url":"","caption":"AOI Inspection"}]'::jsonb,
   1
@@ -362,7 +362,7 @@ INSERT INTO services (id, title, description, benefits, industries, icon, sort_o
 (
   'pick-place',
   'Automated Pick & Place',
-  'High-speed automated component placement using JUKI pick-and-place machines capable of handling 0201 to large QFP packages. Our flexible SMT lines support both high-mix/low-volume and high-volume production with quick changeover.',
+  'High-speed automated component placement using YAMAHA pick-and-place machines capable of handling 0201 to large QFP packages. Our flexible SMT lines support both high-mix/low-volume and high-volume production with quick changeover.',
   ARRAY['0201 to large QFP range', 'High-speed placement', 'Quick changeover', 'Flexible production volumes'],
   ARRAY['Telecom', 'Automotive', 'Medical'],
   'Layers',

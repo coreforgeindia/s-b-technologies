@@ -45,8 +45,8 @@ export const products = [
   {
     id: "smt-assembly",
     title: "SMT Assembly",
-    description: "High-precision Surface Mount Technology assembly with 0603 chip placement capability using advanced JUKI pick-and-place machines.",
-    detail: "Our SMT Assembly line is built around industry-leading JUKI automated pick-and-place machines capable of placing components as small as 0201 and 0402 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defects, and rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.",
+    description: "High-precision Surface Mount Technology assembly with 0603 chip placement capability.",
+    detail: "Our SMT Assembly line is built around industry-leading YAMAHA automated pick-and-place machines capable of placing components as small as 0201 and 0402 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defects, and rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.",
     image: smtAssemblyImage,
     gallery: [
       { url: solderPasteImg, caption: "Solder Paste Printing" },
@@ -55,7 +55,7 @@ export const products = [
     ],
     features: [
       "0201/0402 chip placement",
-      "JUKI automated machines",
+      "YAMAHA automated machines",
       "High-speed production",
       "In-line AOI inspection"
     ]
@@ -150,7 +150,7 @@ export const keyStrengths = [
   },
   {
     title: "Advanced Equipment",
-    description: "State-of-the-art JUKI pick-and-place, multi-zone reflow ovens, and automated optical inspection systems."
+    description: "State-of-the-art YAMAHA pick-and-place, multi-zone reflow ovens, and automated optical inspection systems."
   },
   {
     title: "Design-for-Manufacturing",
@@ -248,7 +248,7 @@ export const projects = [
 ];
 
 export const faqs = [
-  { category: "Services", question: "What SMT component sizes can you handle?", answer: "Our JUKI pick-and-place machines can place components as small as 0201 (metric 0603) packages, and we routinely handle 0402, 0603, 0805, and larger passives, as well as fine-pitch ICs down to 0.4mm pitch." },
+  { category: "Services", question: "What SMT component sizes can you handle?", answer: "Our YAMAHA pick-and-place machines can place components as small as 0201 (metric 0603) packages, and we routinely handle 0402, 0603, 0805, and larger passives, as well as fine-pitch ICs down to 0.4mm pitch." },
   { category: "Services", question: "Do you handle both through-hole and SMD assembly?", answer: "Yes. We offer complete through-hole, SMD, and mixed-technology PCB assembly. Our wave soldering and selective soldering capabilities handle through-hole components, while our SMT line handles surface mount devices." },
   { category: "Services", question: "What PCB design tools do you support?", answer: "Our in-house CAD/CAM team works with OrCAD, PCAD, PADS, and Altium Designer. We accept design files in all standard formats including ODB++, Gerber RS-274X, and IPC-2581." },
   { category: "Quality", question: "What quality standards do you follow?", answer: "All our assemblies are manufactured and inspected per IPC-A-610 Class 2 and Class 3 standards. We employ AOI, X-ray, ICT, and functional testing to ensure zero-defect delivery." },
@@ -263,7 +263,7 @@ export const faqs = [
 export const resources = [
   { id: "company-profile", title: "Company Profile", description: "Full company overview including capabilities, equipment list, certifications, and key contact details for S.B. Technologies.", type: "Company Profile", fileSize: "2.1 MB" },
   { id: "capability-brochure", title: "Capabilities Brochure", description: "Detailed brochure covering our SMT assembly, PCB assembly, soldering, and CAD/CAM design service offerings.", type: "Brochure", fileSize: "3.8 MB" },
-  { id: "equipment-list", title: "Equipment & Machine List", description: "Complete listing of our JUKI pick-and-place machines, reflow ovens, wave soldering systems, AOI, and X-ray inspection equipment.", type: "Technical Datasheet", fileSize: "1.4 MB" },
+  { id: "equipment-list", title: "Equipment & Machine List", description: "Complete listing of our YAMAHA pick-and-place machines, reflow ovens, wave soldering systems, AOI, and X-ray inspection equipment.", type: "Technical Datasheet", fileSize: "1.4 MB" },
   { id: "ipc-compliance", title: "IPC-A-610 Compliance Statement", description: "Our compliance statement and workmanship standards documentation for IPC-A-610 Class 2 and Class 3 assemblies.", type: "Certificate", fileSize: "0.5 MB" },
   { id: "dfm-guidelines", title: "DFM Design Guidelines", description: "Design-for-Manufacturing guidelines for PCB designers to optimize their layouts for our SMT and through-hole assembly processes.", type: "Technical Datasheet", fileSize: "2.3 MB" },
   { id: "rohs-declaration", title: "RoHS Compliance Declaration", description: "Our RoHS compliance declaration and lead-free process capability documentation for environmental compliance.", type: "Certificate", fileSize: "0.3 MB" }

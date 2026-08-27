@@ -32,7 +32,7 @@ export default function Home() {
   };
 
   const clientLogos = [
-    { name: "JUKI", type: "Equipment" },
+    { name: "YAMAHA", type: "Equipment" },
     { name: "Yamaha", type: "Partner" },
     { name: "Kester", type: "Supplier" },
     { name: "Indium", type: "Materials" },

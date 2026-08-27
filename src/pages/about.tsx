@@ -44,7 +44,7 @@ export default function About() {
                   Since our inception in 1995, S.B. TECHNOLOGIES has grown to become a trusted name in Implementing Technology. Based in Bangalore, we specialize in PCB manufacturing, automated reflow soldering, through-hole and SMD technology assembly, and PCB CAD/CAM design services.
                 </p>
                 <p>
-                  With IPC-A-610 compliant processes and state-of-the-art equipment including JUKI pick-and-place machines, multi-zone reflow ovens, and wave soldering systems, we deliver consistent, high-quality assemblies. Our advanced AOI and X-ray inspection systems ensure zero-defect manufacturing.
+                  With IPC-A-610 compliant processes and state-of-the-art equipment including YAMAHA pick-and-place machines, multi-zone reflow ovens, and wave soldering systems, we deliver consistent, high-quality assemblies. Our advanced AOI and X-ray inspection systems ensure zero-defect manufacturing.
                 </p>
                 <p>
                   Beyond assembly, our capabilities extend to PCB design (OrCAD, PCAD, PADS), prototype development, rework services, and embedded system development — allowing us to serve as a comprehensive EMS partner for clients across the globe.

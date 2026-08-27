@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { 
-  Award, Users, Cpu, Settings, Headphones, 
-  Smile, Truck, ShieldAlert, BadgeCheck, Activity 
+import {
+  Award, Users, Cpu, Settings, Headphones,
+  Smile, Truck, ShieldAlert, BadgeCheck, Activity
 } from "lucide-react";
 import { stats } from "@/data/content";
 import { AnimatedCounter } from "@/components/animated-counter";
@@ -28,7 +28,7 @@ export default function WhyUs() {
     {
       icon: <Cpu className="w-8 h-8 text-primary" />,
       title: "Advanced Equipment",
-      desc: "JUKI pick-and-place machines, multi-zone reflow ovens, wave soldering, and automated optical inspection systems."
+      desc: "YAMAHA pick-and-place machines, multi-zone reflow ovens, wave soldering, and automated optical inspection systems."
     },
     {
       icon: <Settings className="w-8 h-8 text-primary" />,
@@ -69,7 +69,7 @@ export default function WhyUs() {
 
   const timelineSteps = [
     { year: "1995", title: "Company Founded", desc: "S.B. Technologies established in Bangalore, starting with through-hole PCB assembly and basic electronics manufacturing." },
-    { year: "2002", title: "SMT Line Expansion", desc: "Invested in first JUKI pick-and-place machine and reflow oven, expanding into surface mount technology assembly." },
+    { year: "2002", title: "SMT Line Expansion", desc: "Invested in first YAMAHA pick-and-place machine and reflow oven, expanding into surface mount technology assembly." },
     { year: "2008", title: "CAD/CAM Design Division", desc: "Launched in-house PCB design division with OrCAD, PCAD, and PADS, offering end-to-end design-to-assembly services." },
     { year: "2015", title: "Advanced Inspection Capability", desc: "Added AOI and X-ray inspection systems for BGA/QFN verification, achieving IPC-A-610 compliance across all assembly lines." },
     { year: "2024", title: "High-Volume & Global Reach", desc: "Expanded capacity with multiple SMT lines and wave soldering, serving OEM clients across 15+ countries worldwide." }
@@ -106,7 +106,7 @@ export default function WhyUs() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {advantages.map((adv, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -159,7 +159,7 @@ export default function WhyUs() {
 
           <div className="relative border-l-2 border-primary/20 max-w-4xl mx-auto pl-6 md:pl-10 space-y-12">
             {timelineSteps.map((step, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -25 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -169,7 +169,7 @@ export default function WhyUs() {
               >
                 {/* Timeline Dot */}
                 <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-white border-4 border-primary flex items-center justify-center shadow-sm" />
-                
+
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary font-bold text-sm rounded-full mb-3">
                   {step.year}
                 </span>
