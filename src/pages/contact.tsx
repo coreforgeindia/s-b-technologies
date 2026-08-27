@@ -311,6 +311,30 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      {/* Google Maps */}
+      <section className="py-16 bg-zinc-50 border-t border-zinc-200">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 mb-3">Find Us</h2>
+            <div className="h-1 w-16 bg-primary mx-auto mb-4"></div>
+            <p className="text-zinc-500 text-sm">Visit our manufacturing facility in Bangalore</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-zinc-200 shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124433.29779663625!2d77.38438449726563!3d12.937224299999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae155fa37a7207%3A0x6029ca147b1987d2!2sS.B.TECHNOLOGIES!5e0!3m2!1sen!2sin!4v1787828548803!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="S.B. Technologies Location"
+              className="w-full"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -239,16 +239,15 @@ export function AdminLayout({ children }: { children: ReactNode }) {
     <div className="h-screen w-screen bg-zinc-950 flex overflow-hidden">
       {/* Sidebar - Fixed to 100vh screen height */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-72 bg-zinc-900/95 backdrop-blur-xl border-r border-zinc-800 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:h-screen lg:flex-shrink-0 ${
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`fixed inset-y-0 left-0 z-50 w-72 bg-zinc-900/95 backdrop-blur-xl border-r border-zinc-800 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:h-screen lg:flex-shrink-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
         <div className="flex flex-col h-full">
           {/* Logo */}
           <div className="p-6 border-b border-zinc-800 flex-shrink-0">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-white p-1 flex items-center justify-center shadow-lg shadow-primary/20 overflow-hidden flex-shrink-0">
-                <img src="/logo.png" alt="S.B. Technologies" className="w-full h-full object-contain" />
+                <img src="/logo1.png" alt="S.B. Technologies" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h2 className="text-white font-bold text-sm">S.B. Technologies</h2>
@@ -267,11 +266,10 @@ export function AdminLayout({ children }: { children: ReactNode }) {
                   key={item.href}
                   href={item.href}
                   onClick={() => setSidebarOpen(false)}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 group ${
-                    isActive
+                  className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 group ${isActive
                       ? 'bg-primary/15 text-primary border border-primary/20'
                       : 'text-zinc-400 hover:text-white hover:bg-zinc-800/60 border border-transparent'
-                  }`}
+                    }`}
                 >
                   <Icon size={18} className={isActive ? 'text-primary' : 'text-zinc-500 group-hover:text-primary'} />
                   <span>{item.label}</span>
