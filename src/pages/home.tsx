@@ -85,12 +85,7 @@ export default function Home() {
             variants={staggerContainer}
             className="max-w-4xl text-left"
           >
-            <motion.span
-              variants={fadeIn}
-              className="inline-block px-3.5 py-1.5 bg-primary/10 border border-primary/20 text-primary font-bold text-xs uppercase tracking-widest rounded-full mb-6"
-            >
-              IPC-A-610 Compliant
-            </motion.span>
+
 
             <motion.h1
               variants={fadeIn}
@@ -143,10 +138,10 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-navy">Who We Are</h2>
               <div className="h-1 w-20 bg-primary"></div>
               <p className="text-zinc-600 text-lg leading-relaxed">
-                {companyName} is a Bangalore-based Implementing Technology (EMS) provider offering PCB manufacturing, automated reflow soldering, through-hole and SMD technology assembly, and PCB CAD/CAM design services to clients across the globe.
+                Established in 1995, S.B. Technologies is an IPC-A-610 compliant Electronic Manufacturing Service(EMS) provider known for precision assembly, dependable quality and global service.
               </p>
               <p className="text-zinc-500 leading-relaxed text-sm">
-                With IPC-A-610 compliant processes, state-of-the-art PHILIPS pick-and-place machines, and multi-zone reflow ovens, we deliver consistent, high-quality assemblies from prototype to production volume.
+                With IPC-A-610 compliant processes and state-of-the-art equipment including PHILIPS pick-and-place machines, multi-zone reflow ovens and wave soldering systems, we deliver consistent, high-quality assemblies. Our advanced inspection & Test systems ensure zero-defect manufacturing.
               </p>
               <div className="pt-4">
                 <Link href="/about">
@@ -160,20 +155,29 @@ export default function Home() {
             <div className="lg:w-1/2 bg-zinc-50 p-8 rounded-3xl border border-zinc-100 flex flex-col justify-center space-y-6">
               <div className="flex gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
-                  <ShieldCheck size={24} />
+                  <Factory size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-navy text-lg mb-1">IPC-A-610 Compliant</h4>
-                  <p className="text-zinc-600 text-sm">Industry-standard workmanship ensuring consistent, high-reliability assemblies.</p>
+                  <h4 className="font-bold text-navy text-lg mb-1">Advanced Equipment</h4>
+                  <p className="text-zinc-600 text-sm">State-of-the-art PHILIPS pick-and-place, multi-zone reflow ovens, and DEK Printing systems.</p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
-                  <Factory size={24} />
+                  <Settings size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-navy text-lg mb-1">Advanced SMT Equipment</h4>
-                  <p className="text-zinc-600 text-sm">PHILIPS pick-and-place machines, multi-zone reflow ovens and Digital inspection systems</p>
+                  <h4 className="font-bold text-navy text-lg mb-1">Precision Assembly</h4>
+                  <p className="text-zinc-600 text-sm">Automated pick-and-place with Fine Pitch capability, multi-zone reflow, and wave soldering with Digital inspection.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+                  <ShieldCheck size={24} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-navy text-lg mb-1">Inspection System</h4>
+                  <p className="text-zinc-600 text-sm">Digital & Optical Inspection systems with High Skill work force ensures Final and Pre delivery inspection trouble free.</p>
                 </div>
               </div>
             </div>

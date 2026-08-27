@@ -46,7 +46,7 @@ export const products = [
     id: "smt-assembly",
     title: "SMT Assembly",
     description: "High-precision Surface Mount Technology assembly with 0603 chip placement capability.",
-    detail: "Our SMT Assembly line is built around industry-leading YAMAHA automated pick-and-place machines capable of placing components as small as 0201 and 0402 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defects, and rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.",
+    detail: "Our SMT Assembly line is built around industry-leading YAMAHA automated pick-and-place machines capable of placing components as small as 0603 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defects, and rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.",
     image: smtAssemblyImage,
     gallery: [
       { url: solderPasteImg, caption: "Solder Paste Printing" },
@@ -54,7 +54,7 @@ export const products = [
       { url: aoiImg, caption: "AOI Inspection" }
     ],
     features: [
-      "0201/0402 chip placement",
+      "0603 chip placement",
       "YAMAHA automated machines",
       "High-speed production",
       "In-line AOI inspection"
@@ -150,7 +150,7 @@ export const keyStrengths = [
   },
   {
     title: "Advanced Equipment",
-    description: "State-of-the-art YAMAHA pick-and-place, multi-zone reflow ovens, and automated optical inspection systems."
+    description: "State-of-the-art PHILIPS pick-and-place, multi-zone reflow ovens, and DEK Printing systems."
   },
   {
     title: "Design-for-Manufacturing",
@@ -248,7 +248,7 @@ export const projects = [
 ];
 
 export const faqs = [
-  { category: "Services", question: "What SMT component sizes can you handle?", answer: "Our YAMAHA pick-and-place machines can place components as small as 0201 (metric 0603) packages, and we routinely handle 0402, 0603, 0805, and larger passives, as well as fine-pitch ICs down to 0.4mm pitch." },
+  { category: "Services", question: "What SMT component sizes can you handle?", answer: "Our YAMAHA pick-and-place machines can place components as small as 0603 packages, and we routinely handle 0805 and larger passives, as well as fine-pitch ICs down to 0.4mm pitch." },
   { category: "Services", question: "Do you handle both through-hole and SMD assembly?", answer: "Yes. We offer complete through-hole, SMD, and mixed-technology PCB assembly. Our wave soldering and selective soldering capabilities handle through-hole components, while our SMT line handles surface mount devices." },
   { category: "Services", question: "What PCB design tools do you support?", answer: "Our in-house CAD/CAM team works with OrCAD, PCAD, PADS, and Altium Designer. We accept design files in all standard formats including ODB++, Gerber RS-274X, and IPC-2581." },
   { category: "Quality", question: "What quality standards do you follow?", answer: "All our assemblies are manufactured and inspected per IPC-A-610 Class 2 and Class 3 standards. We employ AOI, X-ray, ICT, and functional testing to ensure zero-defect delivery." },

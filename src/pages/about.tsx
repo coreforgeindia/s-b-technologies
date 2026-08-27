@@ -22,7 +22,7 @@ export default function About() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <motion.h1 initial="hidden" animate="visible" variants={fadeIn} className="text-4xl md:text-6xl font-bold text-white mb-6">About Us</motion.h1>
           <motion.p initial="hidden" animate="visible" variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.1 } } }} className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            Established in {established}, S.B. Technologies is an IPC-A-610 compliant Implementing Technology (EMS) provider known for precision assembly, dependable quality, and global service.
+            Established in {established}, S.B. Technologies is an IPC-A-610 compliant Electronic Manufacturing Service(EMS) provider known for precision assembly, dependable quality and global service.
           </motion.p>
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function About() {
                   Since our inception in 1995, S.B. TECHNOLOGIES has grown to become a trusted name in Implementing Technology. Based in Bangalore, we specialize in PCB manufacturing, automated reflow soldering, through-hole and SMD technology assembly, and PCB CAD/CAM design services.
                 </p>
                 <p>
-                  With IPC-A-610 compliant processes and state-of-the-art equipment including YAMAHA pick-and-place machines, multi-zone reflow ovens, and wave soldering systems, we deliver consistent, high-quality assemblies. Our advanced AOI and X-ray inspection systems ensure zero-defect manufacturing.
+                  With IPC-A-610 compliant processes and state-of-the-art equipment including PHILIPS pick-and-place machines, multi-zone reflow ovens and wave soldering systems, we deliver consistent, high-quality assemblies. Our advanced inspection & Test systems ensure zero-defect manufacturing.
                 </p>
                 <p>
                   Beyond assembly, our capabilities extend to PCB design (OrCAD, PCAD, PADS), prototype development, rework services, and embedded system development — allowing us to serve as a comprehensive EMS partner for clients across the globe.
@@ -116,7 +116,7 @@ export default function About() {
               <Factory className="text-primary w-12 h-12 mb-6" />
               <h4 className="text-xl font-bold mb-3">Precision Assembly</h4>
               <p className="text-zinc-600">
-                Automated pick-and-place with 0201 capability, multi-zone reflow, and wave soldering — all with in-line AOI and X-ray inspection.
+                Automated pick-and-place with Fine Pitch capability, multi-zone reflow, and wave soldering with Digital inspection.
               </p>
             </motion.div>
 
