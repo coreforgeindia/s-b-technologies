@@ -41,13 +41,13 @@ export default function About() {
               </h2>
               <div className="prose prose-zinc max-w-none text-zinc-600 leading-relaxed text-lg space-y-6">
                 <p>
-                  Since our inception in 1995, S.B. TECHNOLOGIES has grown to become a trusted name in Implementing Technology. Based in Bangalore, we specialize in PCB manufacturing, automated reflow soldering, through-hole and SMD technology assembly, and PCB CAD/CAM design services.
+                  Since our inception in 1995, S.B. TECHNOLOGIES has grown to become a trusted name in Implementing Technology. Based in Bangalore, we specialize in PCB manufacturing, automated reflow soldering, through-hole and SMD technology assemblyand PCB CAD/CAM design services.
                 </p>
                 <p>
                   With IPC-A-610 compliant processes and state-of-the-art equipment including PHILIPS pick-and-place machines, multi-zone reflow ovens and wave soldering systems, we deliver consistent, high-quality assemblies. Our advanced inspection & Test systems ensure zero-defect manufacturing.
                 </p>
                 <p>
-                  Beyond assembly, our capabilities extend to PCB design (OrCAD, PCAD, PADS), prototype development, rework services, and embedded system development — allowing us to serve as a comprehensive EMS partner for clients across the globe.
+                  Beyond assembly, our capabilities extend to PCB design (OrCAD, PCAD, PADS), prototype development, rework servicesand embedded system development — allowing us to serve as a comprehensive EMS partner for clients across the globe.
                 </p>
               </div>
             </motion.div>
@@ -116,7 +116,7 @@ export default function About() {
               <Factory className="text-primary w-12 h-12 mb-6" />
               <h4 className="text-xl font-bold mb-3">Precision Assembly</h4>
               <p className="text-zinc-600">
-                Automated pick-and-place with Fine Pitch capability, multi-zone reflow, and wave soldering with Digital inspection.
+                Automated pick-and-place with Fine Pitch capability, multi-zone reflowand wave soldering with Digital inspection.
               </p>
             </motion.div>
 

@@ -28,7 +28,7 @@ export default function Resources() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Technical Resources</h1>
           <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            Download our company profile, catalogues, certificates, type-testing reports, and manuals.
+            Download our company profile, catalogues, certificates, type-testing reportsand manuals.
           </p>
         </div>
       </section>
@@ -56,11 +56,10 @@ export default function Resources() {
                 <button
                   key={type}
                   onClick={() => setSelectedType(type)}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                    selectedType === type
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${selectedType === type
                       ? "bg-primary text-white shadow-sm"
                       : "bg-white border border-zinc-200 text-zinc-600 hover:bg-zinc-100"
-                  }`}
+                    }`}
                 >
                   {type}
                 </button>
@@ -97,7 +96,7 @@ export default function Resources() {
                   <div className="mt-8 pt-4 border-t border-zinc-100 flex items-center justify-between text-xs text-zinc-500">
                     <span>Size: {resource.fileSize}</span>
                     {/* Simulated download */}
-                    <a 
+                    <a
                       href="#download"
                       onClick={(e) => {
                         e.preventDefault();

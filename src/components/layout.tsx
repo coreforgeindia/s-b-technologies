@@ -145,7 +145,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed max-w-sm">
-              A Bangalore-based Electronics Manufacturing Services (EMS) provider offering PCB assembly, automated SMT soldering, through-hole assembly, and PCB CAD/CAM design to clients across the globe.
+              A Bangalore-based Electronics Manufacturing Services (EMS) provider offering PCB assembly, automated SMT soldering, through-hole assemblyand PCB CAD/CAM design to clients across the globe.
             </p>
           </div>
 

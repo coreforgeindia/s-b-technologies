@@ -53,7 +53,29 @@ export function useProducts() {
                 : defaultGallery,
             };
           });
-          setProducts(mapped);
+
+          // Append any static products not found in Supabase (e.g. newly added ones)
+          const dbIds = new Set(mapped.map((p) => p.id));
+          const extraStatic = staticProducts
+            .filter((sp) => !dbIds.has(sp.id))
+            .map((p, i) => ({
+              id: p.id,
+              title: p.title,
+              description: p.description,
+              detail: p.detail,
+              image_url: typeof p.image === 'string' ? p.image : '',
+              features: p.features,
+              applications: [],
+              gallery: p.gallery?.map((g: any) => ({
+                url: typeof g.url === 'string' ? g.url : '',
+                caption: g.caption,
+              })) || [],
+              sort_order: mapped.length + i,
+              created_at: '',
+              updated_at: '',
+            }));
+
+          setProducts([...mapped, ...extraStatic]);
         } else {
           // Fallback to static
           setProducts(

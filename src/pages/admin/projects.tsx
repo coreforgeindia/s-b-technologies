@@ -9,7 +9,7 @@ function getAdminEmail(): string {
   try {
     const raw = sessionStorage.getItem('sb_admin_direct_login');
     if (raw) return JSON.parse(raw).email;
-  } catch {}
+  } catch { }
   return 'admin';
 }
 
@@ -303,7 +303,7 @@ export default function AdminProjects() {
               value={formDescription}
               onChange={(e) => setFormDescription(e.target.value)}
               rows={3}
-              placeholder="Describe the project scope, deliverables, and outcomes..."
+              placeholder="Describe the project scope, deliverablesand outcomes..."
               className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-xl text-white text-sm focus:outline-none focus:border-primary resize-y"
             />
           </div>
@@ -385,45 +385,45 @@ export default function AdminProjects() {
                     <Briefcase size={20} className="text-zinc-600" />
                   </div>
                 )}
-              <div className="flex-1 min-w-0">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h4 className="text-white font-bold text-sm">{proj.name}</h4>
-                    <p className="text-zinc-500 text-xs mt-1 line-clamp-2">{proj.description}</p>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h4 className="text-white font-bold text-sm">{proj.name}</h4>
+                      <p className="text-zinc-500 text-xs mt-1 line-clamp-2">{proj.description}</p>
+                    </div>
+                    <div className="flex items-center gap-2 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <button
+                        onClick={() => openEdit(proj)}
+                        className="p-2 rounded-lg bg-zinc-800 text-zinc-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-all"
+                      >
+                        <Pencil size={14} />
+                      </button>
+                      <button
+                        onClick={() => setDeleteConfirm({ id: proj.id, name: proj.name })}
+                        className="p-2 rounded-lg bg-zinc-800 text-zinc-400 hover:text-red-400 hover:bg-red-500/10 transition-all"
+                      >
+                        <Trash2 size={14} />
+                      </button>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button
-                      onClick={() => openEdit(proj)}
-                      className="p-2 rounded-lg bg-zinc-800 text-zinc-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-all"
-                    >
-                      <Pencil size={14} />
-                    </button>
-                    <button
-                      onClick={() => setDeleteConfirm({ id: proj.id, name: proj.name })}
-                      className="p-2 rounded-lg bg-zinc-800 text-zinc-400 hover:text-red-400 hover:bg-red-500/10 transition-all"
-                    >
-                      <Trash2 size={14} />
-                    </button>
-                  </div>
-                </div>
-                <div className="flex flex-wrap items-center gap-2 mt-3">
-                  <span className="text-[10px] font-bold px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded border border-emerald-500/20 flex items-center gap-1">
-                    <Tag size={10} /> {proj.industry}
-                  </span>
-                  <span className="text-[10px] font-bold px-2 py-1 bg-zinc-800 text-zinc-500 rounded flex items-center gap-1">
-                    <MapPin size={10} /> {proj.location}
-                  </span>
-                  {(proj.technologies || []).slice(0, 3).map((tech, i) => (
-                    <span key={i} className="text-[10px] font-bold px-2 py-1 bg-primary/10 text-primary rounded border border-primary/20">
-                      {tech}
+                  <div className="flex flex-wrap items-center gap-2 mt-3">
+                    <span className="text-[10px] font-bold px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded border border-emerald-500/20 flex items-center gap-1">
+                      <Tag size={10} /> {proj.industry}
                     </span>
-                  ))}
+                    <span className="text-[10px] font-bold px-2 py-1 bg-zinc-800 text-zinc-500 rounded flex items-center gap-1">
+                      <MapPin size={10} /> {proj.location}
+                    </span>
+                    {(proj.technologies || []).slice(0, 3).map((tech, i) => (
+                      <span key={i} className="text-[10px] font-bold px-2 py-1 bg-primary/10 text-primary rounded border border-primary/20">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
       </div>
     </div>
   );

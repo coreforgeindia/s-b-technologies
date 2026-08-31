@@ -78,7 +78,7 @@ export async function handleContactForm(req: any, res: any) {
       const { name, company, email, phone, interest, message } = data;
       if (!name || !email || !message) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Name, email, and message are required fields' }));
+        res.end(JSON.stringify({ error: 'Name, emailand message are required fields' }));
         return;
       }
 
@@ -131,7 +131,7 @@ export async function handleContactForm(req: any, res: any) {
           ''
         )
         .replace(
-          'Our engineering and technical teams are currently reviewing your design files and requirements. We understand that your project\'s timeline and technical specifications are critical, and we are committed to providing you with an accurate and competitive proposal.',
+          'Our engineering and technical teams are currently reviewing your design files and requirements. We understand that your project\'s timeline and technical specifications are criticaland we are committed to providing you with an accurate and competitive proposal.',
           ''
         );
 

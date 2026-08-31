@@ -114,7 +114,7 @@ export default function AdminDashboard() {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-white mb-1">Welcome to Admin Panel</h2>
-            <p className="text-zinc-400 text-sm">Manage your website content, gallery, and company profile from here.</p>
+            <p className="text-zinc-400 text-sm">Manage your website content, galleryand company profile from here.</p>
           </div>
         </div>
       </div>
@@ -165,12 +165,11 @@ export default function AdminDashboard() {
           <div className="divide-y divide-zinc-800/50">
             {recentLogs.map((log) => (
               <div key={log.id} className="px-6 py-4 flex items-center gap-4 hover:bg-zinc-800/30 transition-colors">
-                <div className={`w-2 h-2 rounded-full flex-shrink-0 ${
-                  log.action === 'LOGIN' ? 'bg-emerald-500' :
-                  log.action === 'CREATE' ? 'bg-blue-500' :
-                  log.action === 'UPDATE' ? 'bg-amber-500' :
-                  log.action === 'DELETE' ? 'bg-red-500' : 'bg-zinc-500'
-                }`} />
+                <div className={`w-2 h-2 rounded-full flex-shrink-0 ${log.action === 'LOGIN' ? 'bg-emerald-500' :
+                    log.action === 'CREATE' ? 'bg-blue-500' :
+                      log.action === 'UPDATE' ? 'bg-amber-500' :
+                        log.action === 'DELETE' ? 'bg-red-500' : 'bg-zinc-500'
+                  }`} />
                 <div className="flex-1 min-w-0">
                   <p className="text-white text-sm font-medium truncate">{log.details}</p>
                   <p className="text-zinc-500 text-xs">{log.user_email} · {log.entity_type}</p>

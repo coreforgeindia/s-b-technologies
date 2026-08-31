@@ -24,7 +24,7 @@ export default function Projects() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Our Projects</h1>
           <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            A showcase of our completed installations, customized power solutions, and engineering achievements.
+            A showcase of our completed installations, customized power solutionsand engineering achievements.
           </p>
         </div>
       </section>
@@ -38,17 +38,16 @@ export default function Projects() {
               <Filter className="text-primary" size={20} />
               <span>Filter by Industry</span>
             </div>
-            
+
             <div className="flex flex-wrap gap-2">
               {industries.map((industry) => (
                 <button
                   key={industry}
                   onClick={() => setSelectedIndustry(industry)}
-                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all cursor-pointer ${
-                    selectedIndustry === industry
+                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all cursor-pointer ${selectedIndustry === industry
                       ? "bg-primary text-white shadow-md shadow-primary/20"
                       : "bg-zinc-50 border border-zinc-100 text-zinc-600 hover:bg-zinc-100"
-                  }`}
+                    }`}
                 >
                   {industry}
                 </button>
@@ -75,15 +74,15 @@ export default function Projects() {
               <Briefcase size={48} className="mx-auto mb-4" />
               <p className="text-lg font-semibold">No projects found</p>
               <p className="text-sm mt-2">
-                {selectedIndustry !== "All" 
-                  ? "Try selecting a different industry filter" 
+                {selectedIndustry !== "All"
+                  ? "Try selecting a different industry filter"
                   : "Projects will appear here once added via the admin dashboard"}
               </p>
             </div>
           ) : (
             /* Grid Layout */
-            <motion.div 
-              layout 
+            <motion.div
+              layout
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
             >
               <AnimatePresence mode="popLayout">
@@ -100,9 +99,9 @@ export default function Projects() {
                     {/* Image Header */}
                     <div className="h-52 overflow-hidden relative">
                       {project.image_url ? (
-                        <img 
-                          src={project.image_url} 
-                          alt={project.name} 
+                        <img
+                          src={project.image_url}
+                          alt={project.name}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       ) : (
@@ -120,15 +119,15 @@ export default function Projects() {
                     <div className="p-6 flex-grow flex flex-col justify-between">
                       <div className="space-y-4">
                         <h3 className="text-xl font-bold text-navy group-hover:text-primary transition-colors line-clamp-1">{project.name}</h3>
-                        
+
                         <p className="text-zinc-500 text-sm leading-relaxed line-clamp-3">
                           {project.description}
                         </p>
 
                         <div className="flex flex-wrap gap-1.5 pt-2">
                           {(project.technologies || []).map((tech) => (
-                            <span 
-                              key={tech} 
+                            <span
+                              key={tech}
                               className="bg-zinc-50 border border-zinc-100 text-zinc-600 text-xs px-2.5 py-1 rounded font-medium"
                             >
                               {tech}

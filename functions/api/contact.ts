@@ -264,7 +264,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     if (!name || !email || !message) {
       return new Response(
-        JSON.stringify({ error: 'Name, email, and message are required' }),
+        JSON.stringify({ error: 'Name, emailand message are required' }),
         { status: 400, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
       );
     }
@@ -280,7 +280,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     }
 
     const interestLabel = INTEREST_MAP[interest] || interest || 'Not Specified';
-    const reviewParagraph = `<p style="margin: 0 0 24px 0; font-size: 15px; line-height: 1.6; color: #4a5568;">Our engineering and technical teams are currently reviewing your design files and requirements. We understand that your project's timeline and technical specifications are critical, and we are committed to providing you with an accurate and competitive proposal.</p>`;
+    const reviewParagraph = `<p style="margin: 0 0 24px 0; font-size: 15px; line-height: 1.6; color: #4a5568;">Our engineering and technical teams are currently reviewing your design files and requirements. We understand that your project's timeline and technical specifications are criticaland we are committed to providing you with an accurate and competitive proposal.</p>`;
 
     // Build client thank-you email
     const clientHtml = buildHtml(

@@ -32,15 +32,15 @@ export default function Home() {
   };
 
   const clientLogos = [
-    { name: "YAMAHA", type: "Equipment" },
-    { name: "Yamaha", type: "Partner" },
-    { name: "Kester", type: "Supplier" },
-    { name: "Indium", type: "Materials" },
-    { name: "Vishay", type: "Components" },
-    { name: "Murata", type: "Supplier" }
+    { name: "Yamaha", type: "Equipment" },
+    { name: "DEK", type: "Equipment" },
+    { name: "DigiKey", type: "Supplier" },
+    { name: "Hybrid Metals", type: "Materials" },
+    { name: "Wurth", type: "Components" },
+    { name: "Mouser", type: "Supplier" }
   ];
 
-  // Use first 3 gallery items with images for preview, or fallback placeholder
+  // Use first 3 gallery items with images for previeworfallback placeholder
   const previewGallery = galleryItems
     .filter(g => g.image_url)
     .slice(0, 3);
@@ -99,7 +99,7 @@ export default function Home() {
               variants={fadeIn}
               className="text-lg md:text-xl text-zinc-300 mb-10 max-w-2xl leading-relaxed"
             >
-              Delivering Precision PCB Assembly, SMT Soldering, Through-Hole Assembly, and CAD/CAM Design Services to Clients Across the Globe.
+              Delivering Precision PCB Assembly, SMT Soldering, Through-Hole Assemblyand CAD/CAM Design Services to Clients Across the Globe.
             </motion.p>
 
             <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
@@ -159,7 +159,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-bold text-navy text-lg mb-1">Advanced Equipment</h4>
-                  <p className="text-zinc-600 text-sm">State-of-the-art PHILIPS pick-and-place, multi-zone reflow ovens, and DEK Printing systems.</p>
+                  <p className="text-zinc-600 text-sm">State-of-the-art PHILIPS pick-and-place, multi-zone reflow ovens and DEK Printing systems.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -168,7 +168,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-bold text-navy text-lg mb-1">Precision Assembly</h4>
-                  <p className="text-zinc-600 text-sm">Automated pick-and-place with Fine Pitch capability, multi-zone reflow, and wave soldering with Digital inspection.</p>
+                  <p className="text-zinc-600 text-sm">Automated pick-and-place with Fine Pitch capability, multi-zone reflowand wave soldering with Digital inspection.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -512,7 +512,7 @@ export default function Home() {
         <div className="max-w-[1280px] mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-navy">Ready to Start Your Next PCB Project?</h2>
           <p className="text-zinc-500 text-xl mb-10 max-w-2xl mx-auto">
-            Contact our engineering team to discuss your PCB assembly, SMT soldering, or design requirements.
+            Contact our engineering team to discuss your PCB assembly, SMT solderingordesign requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

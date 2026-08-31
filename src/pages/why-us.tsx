@@ -28,22 +28,22 @@ export default function WhyUs() {
     {
       icon: <Cpu className="w-8 h-8 text-primary" />,
       title: "Advanced Equipment",
-      desc: "YAMAHA pick-and-place machines, multi-zone reflow ovens, wave soldering, and automated optical inspection systems."
+      desc: "YAMAHA pick-and-place machines, multi-zone reflow ovens, wave solderingand automated optical inspection systems."
     },
     {
       icon: <Settings className="w-8 h-8 text-primary" />,
       title: "Customized Solutions",
-      desc: "From prototype single boards to high-volume production, we tailor our process to your exact BOM, specs, and delivery schedule."
+      desc: "From prototype single boards to high-volume production, we tailor our process to your exact BOM, specsand delivery schedule."
     },
     {
       icon: <Headphones className="w-8 h-8 text-primary" />,
       title: "Reliable Support",
-      desc: "We offer end-to-end support from DFM review and BOM sourcing to assembly, testing, firmware flashing, and box-build."
+      desc: "We offer end-to-end support from DFM review and BOM sourcing to assembly, testing, firmware flashingand box-build."
     },
     {
       icon: <Smile className="w-8 h-8 text-primary" />,
       title: "Customer Satisfaction",
-      desc: "Our client retention rate reflects our dedication to quality, on-time delivery, and transparent communication."
+      desc: "Our client retention rate reflects our dedication to quality, on-time deliveryand transparent communication."
     },
     {
       icon: <Truck className="w-8 h-8 text-primary" />,
@@ -53,24 +53,24 @@ export default function WhyUs() {
     {
       icon: <ShieldAlert className="w-8 h-8 text-primary" />,
       title: "ESD & Safety Standards",
-      desc: "Full ESD-safe facility with controlled access, anti-static workstations, and compliant packaging for sensitive components."
+      desc: "Full ESD-safe facility with controlled access, anti-static workstationsand compliant packaging for sensitive components."
     },
     {
       icon: <BadgeCheck className="w-8 h-8 text-primary" />,
       title: "IPC-Certified Processes",
-      desc: "IPC-A-610 compliant manufacturing workflow ensuring reproducibility, traceability, and workmanship excellence."
+      desc: "IPC-A-610 compliant manufacturing workflow ensuring reproducibility, traceabilityand workmanship excellence."
     },
     {
       icon: <Activity className="w-8 h-8 text-primary" />,
       title: "Global Expertise",
-      desc: "Serving clients in telecom, medical, automotive, IoT, and defense sectors across multiple continents since 1995."
+      desc: "Serving clients in telecom, medical, automotive, IoTand defense sectors across multiple continents since 1995."
     }
   ];
 
   const timelineSteps = [
     { year: "1995", title: "Company Founded", desc: "S.B. Technologies established in Bangalore, starting with through-hole PCB assembly and basic electronics manufacturing." },
     { year: "2002", title: "SMT Line Expansion", desc: "Invested in first YAMAHA pick-and-place machine and reflow oven, expanding into surface mount technology assembly." },
-    { year: "2008", title: "CAD/CAM Design Division", desc: "Launched in-house PCB design division with OrCAD, PCAD, and PADS, offering end-to-end design-to-assembly services." },
+    { year: "2008", title: "CAD/CAM Design Division", desc: "Launched in-house PCB design division with OrCAD, PCADand PADS, offering end-to-end design-to-assembly services." },
     { year: "2015", title: "Advanced Inspection Capability", desc: "Added AOI and X-ray inspection systems for BGA/QFN verification, achieving IPC-A-610 compliance across all assembly lines." },
     { year: "2024", title: "High-Volume & Global Reach", desc: "Expanded capacity with multiple SMT lines and wave soldering, serving OEM clients across 15+ countries worldwide." }
   ];
@@ -100,7 +100,7 @@ export default function WhyUs() {
             </h2>
             <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
             <p className="text-zinc-600 text-lg leading-relaxed">
-              We stand apart through our commitment to engineering excellence, design transparency, and uncompromising build quality.
+              We stand apart through our commitment to engineering excellence, design transparencyand uncompromising build quality.
             </p>
           </div>
 

@@ -15,70 +15,70 @@ export default function Industries() {
       name: "Telecommunications",
       icon: "Radio",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
-      description: "High-reliability PCB assemblies for telecom infrastructure, base station controllers, networking equipment, and 5G communication modules."
+      description: "High-reliability PCB assemblies for telecom infrastructure, base station controllers, networking equipmentand 5G communication modules."
     },
     {
       id: "industrial-controls",
       name: "Industrial Controls",
       icon: "Settings2",
       image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&auto=format&fit=crop&q=80",
-      description: "Ruggedized PCB assemblies for PLCs, motor drives, sensors, HMI panels, and factory automation control systems."
+      description: "Ruggedized PCB assemblies for PLCs, motor drives, sensors, HMI panelsand factory automation control systems."
     },
     {
       id: "medical-devices",
       name: "Medical Devices",
       icon: "HeartPulse",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
-      description: "IPC Class 3 assemblies for patient monitors, diagnostic instruments, imaging electronics, and wearable health devices."
+      description: "IPC Class 3 assemblies for patient monitors, diagnostic instruments, imaging electronicsand wearable health devices."
     },
     {
       id: "automotive",
       name: "Automotive",
       icon: "Car",
       image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&auto=format&fit=crop&q=80",
-      description: "Automotive-grade PCB assemblies for ECUs, infotainment systems, ADAS modules, EV charging electronics, and dashboard controllers."
+      description: "Automotive-grade PCB assemblies for ECUs, infotainment systems, ADAS modules, EV charging electronicsand dashboard controllers."
     },
     {
       id: "consumer-electronics",
       name: "Consumer Electronics",
       icon: "Smartphone",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80",
-      description: "High-volume SMT assembly for IoT devices, wearables, smart home products, audio equipment, and consumer gadgets."
+      description: "High-volume SMT assembly for IoT devices, wearables, smart home products, audio equipmentand consumer gadgets."
     },
     {
       id: "aerospace-defense",
       name: "Aerospace & Defense",
       icon: "Shield",
       image: "https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&auto=format&fit=crop&q=80",
-      description: "Mission-critical PCB assemblies with full traceability and conformal coating for avionics, satellite, and defense electronics."
+      description: "Mission-critical PCB assemblies with full traceability and conformal coating for avionics, satelliteand defense electronics."
     },
     {
       id: "power-electronics",
       name: "Power Electronics",
       icon: "Zap",
       image: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&auto=format&fit=crop&q=80",
-      description: "Heavy-copper PCB assemblies for power converters, inverters, UPS systems, motor drives, and battery management systems."
+      description: "Heavy-copper PCB assemblies for power converters, inverters, UPS systems, motor drivesand battery management systems."
     },
     {
       id: "iot-embedded",
       name: "IoT & Embedded",
       icon: "Cpu",
       image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
-      description: "Compact, multi-layer PCB assemblies for embedded controllers, edge computing, wireless modules, and IoT gateway devices."
+      description: "Compact, multi-layer PCB assemblies for embedded controllers, edge computing, wireless modulesand IoT gateway devices."
     },
     {
       id: "led-lighting",
       name: "LED & Lighting",
       icon: "Lightbulb",
       image: "https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?w=800&auto=format&fit=crop&q=80",
-      description: "Metal-core and FR4 PCB assemblies for LED drivers, smart lighting controls, high-power illumination, and display modules."
+      description: "Metal-core and FR4 PCB assemblies for LED drivers, smart lighting controls, high-power illuminationand display modules."
     },
     {
       id: "renewable-energy",
       name: "Renewable Energy",
       icon: "Wind",
       image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&auto=format&fit=crop&q=80",
-      description: "PCB assemblies for solar inverters, charge controllers, battery management systems, and wind turbine monitoring electronics."
+      description: "PCB assemblies for solar inverters, charge controllers, battery management systemsand wind turbine monitoring electronics."
     }
   ];
 
@@ -160,7 +160,7 @@ export default function Industries() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-navy">Need a Specialized Electronics Assembly?</h2>
           <p className="text-zinc-500 text-lg mb-10 max-w-2xl mx-auto">
-            Our experienced engineers specialize in customizing PCB assemblies, SMT processes, and embedded systems to fit your exact specifications and industry standards.
+            Our experienced engineers specialize in customizing PCB assemblies, SMT processesand embedded systems to fit your exact specifications and industry standards.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

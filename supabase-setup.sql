@@ -273,7 +273,7 @@ INSERT INTO products (id, title, description, detail, image_url, features, appli
   'smt-assembly',
   'SMT Assembly',
   'High-precision Surface Mount Technology assembly with 0603 chip placement capability using advanced YAMAHA pick-and-place machines.',
-  'Our SMT Assembly line is built around industry-leading YAMAHA automated pick-and-place machines capable of placing components as small as 0201 and 0402 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defects, and rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.',
+  'Our SMT Assembly line is built around industry-leading YAMAHA automated pick-and-place machines capable of placing components as small as 0201 and 0402 packages with exceptional accuracy and speed. From prototype runs to high-volume production, our SMT process delivers consistent solder joint quality, minimal defectsand rapid turnaround. Every board passes through our rigorous in-line inspection systems before leaving the floor.',
   '',
   ARRAY['0201/0402 chip placement', 'YAMAHA automated machines', 'High-speed production', 'In-line AOI inspection'],
   ARRAY['Telecom Infrastructure', 'Consumer Electronics', 'IoT Devices', 'Automotive ECUs'],
@@ -284,7 +284,7 @@ INSERT INTO products (id, title, description, detail, image_url, features, appli
   'pcb-assembly',
   'PCB Assembly (Through-Hole & SMD)',
   'Complete PCB assembly services covering both through-hole insertion and surface mount device (SMD) technology for single and multi-layer boards.',
-  'S.B. Technologies offers end-to-end PCB assembly for through-hole, SMD, and mixed-technology boards. Our assembly process includes automated solder paste application, precision component placement, and selective or wave soldering for through-hole parts. We handle single-sided, double-sided, and multi-layer boards with equal precision, delivering fully assembled and tested PCBAs ready for integration.',
+  'S.B. Technologies offers end-to-end PCB assembly for through-hole, SMDand mixed-technology boards. Our assembly process includes automated solder paste application, precision component placementand selective or wave soldering for through-hole parts. We handle single-sided, double-sidedand multi-layer boards with equal precision, delivering fully assembled and tested PCBAs ready for integration.',
   '',
   ARRAY['Through-Hole & SMD', 'Multi-layer PCBs', 'Mixed technology', 'Fully tested assemblies'],
   ARRAY['Industrial Controllers', 'Medical Devices', 'Power Electronics', 'LED Lighting'],
@@ -306,7 +306,7 @@ INSERT INTO products (id, title, description, detail, image_url, features, appli
   'wave-soldering',
   'Wave Soldering',
   'Precision wave soldering for through-hole components with controlled flux application and preheating for optimal joint quality.',
-  'Our wave soldering systems provide reliable, high-throughput soldering for through-hole and mixed-technology assemblies. With controlled flux spray, multi-stage preheating, and adjustable wave parameters, we achieve consistent barrel fill and fillet formation. Selective pallets allow us to protect SMD components during the wave process, enabling efficient mixed-technology production.',
+  'Our wave soldering systems provide reliable, high-throughput soldering for through-hole and mixed-technology assemblies. With controlled flux spray, multi-stage preheatingand adjustable wave parameters, we achieve consistent barrel fill and fillet formation. Selective pallets allow us to protect SMD components during the wave process, enabling efficient mixed-technology production.',
   '',
   ARRAY['High-throughput soldering', 'Selective pallet capability', 'Controlled flux application', 'Mixed-technology support'],
   ARRAY['Through-Hole Boards', 'Mixed-Technology PCBs', 'Power Supply Modules', 'Connector-Heavy Assemblies'],
@@ -316,8 +316,8 @@ INSERT INTO products (id, title, description, detail, image_url, features, appli
 (
   'bga-assembly',
   'BGA / Micro BGA / QFP / QFN Assembly',
-  'Specialized assembly for advanced packages including Ball Grid Array (BGA), Micro BGA, QFP, QFN, and DFN components.',
-  'S.B. Technologies has deep expertise in assembling challenging advanced packages such as BGA, Micro BGA, QFP, QFN, and DFN. Our precise solder paste deposition, optimized reflow profiles, and X-ray inspection capabilities ensure void-free solder joints and reliable electrical connections. We work with customers on first-article builds to validate every process parameter before production ramp.',
+  'Specialized assembly for advanced packages including Ball Grid Array (BGA), Micro BGA, QFP, QFNand DFN components.',
+  'S.B. Technologies has deep expertise in assembling challenging advanced packages such as BGA, Micro BGA, QFP, QFNand DFN. Our precise solder paste deposition, optimized reflow profilesand X-ray inspection capabilities ensure void-free solder joints and reliable electrical connections. We work with customers on first-article builds to validate every process parameter before production ramp.',
   '',
   ARRAY['BGA & Micro BGA', 'QFP / QFN / DFN', 'X-ray inspection', 'First-article validation'],
   ARRAY['FPGA/SoC Boards', 'High-Speed Digital', 'RF/Wireless Modules', 'Server/Networking'],
@@ -327,8 +327,8 @@ INSERT INTO products (id, title, description, detail, image_url, features, appli
 (
   'pcb-cad-cam',
   'PCB CAD & CAM Design',
-  'Professional PCB layout design and CAM services using OrCAD, PCAD, and PADS for schematic capture through to manufacturing output.',
-  'Our experienced PCB design team provides end-to-end CAD/CAM services from schematic capture to manufacturing-ready Gerber output. Using industry-standard tools including OrCAD, PCAD, and PADS, we deliver optimized layouts for signal integrity, thermal management, and manufacturability (DFM). Whether you need a simple 2-layer board or a complex multi-layer HDI design, our team ensures your PCB is production-ready.',
+  'Professional PCB layout design and CAM services using OrCAD, PCADand PADS for schematic capture through to manufacturing output.',
+  'Our experienced PCB design team provides end-to-end CAD/CAM services from schematic capture to manufacturing-ready Gerber output. Using industry-standard tools including OrCAD, PCADand PADS, we deliver optimized layouts for signal integrity, thermal managementand manufacturability (DFM). Whether you need a simple 2-layer board or a complex multi-layer HDI design, our team ensures your PCB is production-ready.',
   '',
   ARRAY['OrCAD, PCAD, PADS', 'Schematic to Gerber', 'DFM analysis', 'Multi-layer HDI capable'],
   ARRAY['Schematic Capture', 'Multi-Layer Layout', 'HDI Design', 'DFM Analysis'],
@@ -344,7 +344,7 @@ INSERT INTO services (id, title, description, benefits, industries, icon, sort_o
 (
   'rework-prototype',
   'Rework & Prototype Development',
-  'Rapid-turn prototype assembly with 3–5 day turnaround for first-article boards. Our skilled rework technicians handle BGA reballing, component replacement, and modification work for engineering validation and small-batch production.',
+  'Rapid-turn prototype assembly with 3–5 day turnaround for first-article boards. Our skilled rework technicians handle BGA reballing, component replacementand modification work for engineering validation and small-batch production.',
   ARRAY['3–5 day prototype turns', 'BGA reballing & rework', 'Engineering validation', 'Small-batch production'],
   ARRAY['R&D Labs', 'Startups', 'OEMs'],
   'Settings',
@@ -353,7 +353,7 @@ INSERT INTO services (id, title, description, benefits, industries, icon, sort_o
 (
   'embedded-system',
   'Embedded System Development',
-  'End-to-end embedded system development from schematic design through PCB layout, assembly, firmware development, and system integration. We support ARM, PIC, AVR, and FPGA-based designs for IoT, industrial, and consumer applications.',
+  'End-to-end embedded system development from schematic design through PCB layout, assembly, firmware developmentand system integration. We support ARM, PIC, AVRand FPGA-based designs for IoT, industrialand consumer applications.',
   ARRAY['Full-stack embedded design', 'Firmware development', 'System integration', 'Multi-platform support'],
   ARRAY['IoT', 'Industrial Automation', 'Consumer Electronics'],
   'Factory',
@@ -371,7 +371,7 @@ INSERT INTO services (id, title, description, benefits, industries, icon, sort_o
 (
   'turnkey-ems',
   'Turnkey EMS & Box-Build',
-  'Complete turnkey electronics manufacturing from BOM sourcing and component procurement through assembly, testing, conformal coating, and final box-build integration. We manage the entire supply chain so you can focus on your product.',
+  'Complete turnkey electronics manufacturing from BOM sourcing and component procurement through assembly, testing, conformal coatingand final box-build integration. We manage the entire supply chain so you can focus on your product.',
   ARRAY['BOM sourcing & procurement', 'Full supply chain management', 'Conformal coating', 'Box-build assembly'],
   ARRAY['OEMs', 'System Integrators', 'Product Companies'],
   'Wrench',
@@ -412,7 +412,7 @@ INSERT INTO company_profile (id, name, tagline, established, certifications, pho
   ARRAY['+91 98457 79326', '+91 73537 75422'],
   'info@sbtechindia.com',
   'www.sbtechindia.com',
-  '#4, 9th Main, J.C. Industrial Estate, Kanakapura Main Road, Bangalore – 560062, Karnataka, India',
+  '#4, 9th Main, J.C. Industrial Estate, Yelachenahalli,Kanakapura Main Road, Bangalore – 560062, Karnataka, India',
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6!2d77.56!3d12.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzEyLjAiTiA3N8KwMzMnMzYuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin'
 ) ON CONFLICT (id) DO NOTHING;
 
@@ -420,10 +420,10 @@ INSERT INTO company_profile (id, name, tagline, established, certifications, pho
 -- Seed Data - Projects
 -- ============================================================
 INSERT INTO projects (id, name, description, location, industry, technologies, image_url, sort_order) VALUES
-('p1', 'Telecom Base Station Controller', 'Complete PCB assembly of multi-layer controller boards for 4G/5G base stations, including BGA placement, reflow soldering, ICT, and conformal coating.', 'Bangalore, Karnataka', 'Telecommunications', ARRAY['SMT Assembly', 'BGA Placement', 'Conformal Coating'], '', 1),
+('p1', 'Telecom Base Station Controller', 'Complete PCB assembly of multi-layer controller boards for 4G/5G base stations, including BGA placement, reflow soldering, ICTand conformal coating.', 'Bangalore, Karnataka', 'Telecommunications', ARRAY['SMT Assembly', 'BGA Placement', 'Conformal Coating'], '', 1),
 ('p2', 'Industrial PLC Module Assembly', 'Through-hole and SMD mixed-technology assembly of PLC I/O modules for a leading automation equipment manufacturer, with full functional testing.', 'Chennai, Tamil Nadu', 'Industrial Controls', ARRAY['Mixed Technology', 'Wave Soldering', 'Functional Testing'], '', 2),
 ('p3', 'Patient Monitor Electronics', 'IPC Class 3 assembly of patient vital-sign monitor PCBAs with fine-pitch QFP and BGA components, including X-ray inspection and full traceability.', 'Pune, Maharashtra', 'Medical Devices', ARRAY['IPC Class 3', 'QFP/BGA Assembly', 'X-Ray Inspection'], '', 3),
-('p4', 'Automotive ECU Prototype', 'Rapid prototyping and first-article assembly of automotive ECU boards with high-speed signal routing, thermal management, and automotive-grade components.', 'Bangalore, Karnataka', 'Automotive', ARRAY['Prototype Assembly', 'DFM Review', 'Automotive Grade'], '', 4),
-('p5', 'IoT Gateway Board Production', 'High-volume SMT assembly of compact 6-layer IoT gateway boards with WiFi/BLE modules, micro-BGA, and firmware programming.', 'Hyderabad, Telangana', 'IoT & Embedded Systems', ARRAY['High-Volume SMT', 'Micro BGA', 'Firmware Flashing'], '', 5),
-('p6', 'Solar Inverter Power Board', 'Heavy-copper PCB assembly of 3-phase solar inverter power stages with high-current SMD MOSFETs, gate drivers, and thermal interface materials.', 'Bangalore, Karnataka', 'Renewable Energy', ARRAY['Heavy-Copper PCB', 'Power Electronics', 'Selective Soldering'], '', 6)
+('p4', 'Automotive ECU Prototype', 'Rapid prototyping and first-article assembly of automotive ECU boards with high-speed signal routing, thermal managementand automotive-grade components.', 'Bangalore, Karnataka', 'Automotive', ARRAY['Prototype Assembly', 'DFM Review', 'Automotive Grade'], '', 4),
+('p5', 'IoT Gateway Board Production', 'High-volume SMT assembly of compact 6-layer IoT gateway boards with WiFi/BLE modules, micro-BGAand firmware programming.', 'Hyderabad, Telangana', 'IoT & Embedded Systems', ARRAY['High-Volume SMT', 'Micro BGA', 'Firmware Flashing'], '', 5),
+('p6', 'Solar Inverter Power Board', 'Heavy-copper PCB assembly of 3-phase solar inverter power stages with high-current SMD MOSFETs, gate driversand thermal interface materials.', 'Bangalore, Karnataka', 'Renewable Energy', ARRAY['Heavy-Copper PCB', 'Power Electronics', 'Selective Soldering'], '', 6)
 ON CONFLICT (id) DO NOTHING;
