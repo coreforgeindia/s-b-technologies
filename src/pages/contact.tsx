@@ -91,7 +91,7 @@ export default function Contact() {
         <div className="container mx-auto px-4 md:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
           <p className="text-xl text-zinc-400 max-w-2xl">
-            Get in touch for requirements, technical queriesorto schedule a factory visit.
+            Get in touch for requirements, technical queries or to schedule a factory visit.
           </p>
         </div>
       </section>
@@ -285,7 +285,7 @@ export default function Contact() {
                             <FormLabel>Requirements Details</FormLabel>
                             <FormControl>
                               <Textarea
-                                placeholder="Please describe your PCB assembly requirements, BOM details, quantityand any special specifications..."
+                                placeholder="Please describe your PCB assembly requirements, BOM details, quantity and any special specifications..."
                                 className="min-h-[120px] bg-white resize-y"
                                 {...field}
                               />

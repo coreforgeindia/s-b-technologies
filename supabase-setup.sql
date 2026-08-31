@@ -327,8 +327,8 @@ INSERT INTO products (id, title, description, detail, image_url, features, appli
 (
   'pcb-cad-cam',
   'PCB CAD & CAM Design',
-  'Professional PCB layout design and CAM services using OrCAD, PCADand PADS for schematic capture through to manufacturing output.',
-  'Our experienced PCB design team provides end-to-end CAD/CAM services from schematic capture to manufacturing-ready Gerber output. Using industry-standard tools including OrCAD, PCADand PADS, we deliver optimized layouts for signal integrity, thermal managementand manufacturability (DFM). Whether you need a simple 2-layer board or a complex multi-layer HDI design, our team ensures your PCB is production-ready.',
+  'Professional PCB layout design and CAM services using OrCAD, PCAD and PADS for schematic capture through to manufacturing output.',
+  'Our experienced PCB design team provides end-to-end CAD/CAM services from schematic capture to manufacturing-ready Gerber output. Using industry-standard tools including OrCAD, PCAD and PADS, we deliver optimized layouts for signal integrity, thermal managementand manufacturability (DFM). Whether you need a simple 2-layer board or a complex multi-layer HDI design, our team ensures your PCB is production-ready.',
   '',
   ARRAY['OrCAD, PCAD, PADS', 'Schematic to Gerber', 'DFM analysis', 'Multi-layer HDI capable'],
   ARRAY['Schematic Capture', 'Multi-Layer Layout', 'HDI Design', 'DFM Analysis'],

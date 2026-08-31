@@ -54,7 +54,7 @@ export default function Products() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Products & Services</h1>
           <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            Comprehensive PCB assembly and Implementing Technology engineered for precision, reliabilityand rapid turnaround.
+            Comprehensive PCB assembly and Implementing Technology engineered for precision, reliability and rapid turnaround.
           </p>
         </div>
       </section>
@@ -68,7 +68,7 @@ export default function Products() {
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Complete EMS Solutions</h2>
                 <div className="h-1 w-16 bg-primary mb-6 animate-pulse"></div>
                 <p className="text-zinc-400 text-base leading-relaxed">
-                  From single prototype boards to high-volume production runs, our complete range of SMT, through-holeand mixed-technology assembly services is built to handle diverse and demanding electronics manufacturing needs.
+                  From single prototype boards to high-volume production runs, our complete range of SMT, through-hole and mixed-technology assembly services is built to handle diverse and demanding electronics manufacturing needs.
                 </p>
               </div>
               <div className="md:w-1/2 bg-black h-64 md:h-auto self-stretch relative flex items-center justify-center p-8">

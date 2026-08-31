@@ -264,7 +264,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     if (!name || !email || !message) {
       return new Response(
-        JSON.stringify({ error: 'Name, emailand message are required' }),
+        JSON.stringify({ error: 'Name, email and message are required' }),
         { status: 400, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
       );
     }

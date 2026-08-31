@@ -112,8 +112,8 @@ export const products = [
   {
     id: "pcb-cad-cam",
     title: "PCB CAD & CAM Design",
-    description: "Professional PCB layout design and CAM services using OrCAD, PCADand PADS for schematic capture through to manufacturing output.",
-    detail: "Our experienced PCB design team provides end-to-end CAD/CAM services from schematic capture to manufacturing-ready Gerber output. Using industry-standard tools including OrCAD, PCADand PADS, we deliver optimized layouts for signal integrity, thermal managementand manufacturability (DFM). Whether you need a simple 2-layer board or a complex multi-layer HDI design, our team ensures your PCB is production-ready.",
+    description: "Professional PCB layout design and CAM services using OrCAD, PCAD and PADS for schematic capture through to manufacturing output.",
+    detail: "Our experienced PCB design team provides end-to-end CAD/CAM services from schematic capture to manufacturing-ready Gerber output. Using industry-standard tools including OrCAD, PCAD and PADS, we deliver optimized layouts for signal integrity, thermal managementand manufacturability (DFM). Whether you need a simple 2-layer board or a complex multi-layer HDI design, our team ensures your PCB is production-ready.",
     image: cadCamImage,
     gallery: [
       { url: pickPlaceImg, caption: "Design to Assembly" },
@@ -244,11 +244,11 @@ export const industries = [
   { id: "medical-devices", name: "Medical Devices", icon: "HeartPulse", description: "IPC Class 3 assemblies for patient monitors, diagnostic instrumentsand medical imaging electronics." },
   { id: "automotive", name: "Automotive", icon: "Car", description: "Automotive-grade PCB assemblies for ECUs, infotainment, ADASand EV charging systems." },
   { id: "consumer-electronics", name: "Consumer Electronics", icon: "Smartphone", description: "High-volume SMT assembly for IoT devices, wearables, smart home productsand consumer gadgets." },
-  { id: "aerospace-defense", name: "Aerospace & Defense", icon: "Shield", description: "Mission-critical assemblies with full traceability for avionics, satelliteand defense electronics." },
-  { id: "power-electronics", name: "Power Electronics", icon: "Zap", description: "Heavy-copper PCB assemblies for power converters, inverters, UPS systemsand motor drives." },
+  { id: "aerospace-defense", name: "Aerospace & Defense", icon: "Shield", description: "Mission-critical assemblies with full traceability for avionics, satellite and defense electronics." },
+  { id: "power-electronics", name: "Power Electronics", icon: "Zap", description: "Heavy-copper PCB assemblies for power converters, inverters, UPS systems and motor drives." },
   { id: "iot-embedded", name: "IoT & Embedded Systems", icon: "Cpu", description: "Compact, multi-layer PCB assemblies for embedded controllers, edge computingand IoT gateways." },
   { id: "led-lighting", name: "LED & Lighting", icon: "Lightbulb", description: "Metal-core and FR4 PCB assemblies for LED drivers, smart lightingand high-power illumination modules." },
-  { id: "renewable-energy", name: "Renewable Energy", icon: "Wind", description: "PCB assemblies for solar inverters, charge controllers, battery management systemsand wind turbine electronics." }
+  { id: "renewable-energy", name: "Renewable Energy", icon: "Wind", description: "PCB assemblies for solar inverters, charge controllers, battery management systems and wind turbine electronics." }
 ];
 
 export const stats = [
@@ -283,7 +283,7 @@ export const faqs = [
 
 export const resources = [
   { id: "company-profile", title: "Company Profile", description: "Full company overview including capabilities, equipment list, certificationsand key contact details for S.B. Technologies.", type: "Company Profile", fileSize: "2.1 MB" },
-  { id: "capability-brochure", title: "Capabilities Brochure", description: "Detailed brochure covering our SMT assembly, PCB assembly, solderingand CAD/CAM design service offerings.", type: "Brochure", fileSize: "3.8 MB" },
+  { id: "capability-brochure", title: "Capabilities Brochure", description: "Detailed brochure covering our SMT assembly, PCB assembly, soldering and CAD/CAM design service offerings.", type: "Brochure", fileSize: "3.8 MB" },
   { id: "equipment-list", title: "Equipment & Machine List", description: "Complete listing of our YAMAHA pick-and-place machines, reflow ovens wave soldering systems, AOIand X-ray inspection equipment.", type: "Technical Datasheet", fileSize: "1.4 MB" },
   { id: "ipc-compliance", title: "IPC-A-610 Compliance Statement", description: "Our compliance statement and workmanship standards documentation for IPC-A-610 Class 2 and Class 3 assemblies.", type: "Certificate", fileSize: "0.5 MB" },
   { id: "dfm-guidelines", title: "DFM Design Guidelines", description: "Design-for-Manufacturing guidelines for PCB designers to optimize their layouts for our SMT and through-hole assembly processes.", type: "Technical Datasheet", fileSize: "2.3 MB" },

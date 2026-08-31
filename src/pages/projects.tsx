@@ -24,7 +24,7 @@ export default function Projects() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Our Projects</h1>
           <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            A showcase of our completed installations, customized power solutionsand engineering achievements.
+            A showcase of our completed installations, customized power solutions and engineering achievements.
           </p>
         </div>
       </section>
@@ -45,8 +45,8 @@ export default function Projects() {
                   key={industry}
                   onClick={() => setSelectedIndustry(industry)}
                   className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all cursor-pointer ${selectedIndustry === industry
-                      ? "bg-primary text-white shadow-md shadow-primary/20"
-                      : "bg-zinc-50 border border-zinc-100 text-zinc-600 hover:bg-zinc-100"
+                    ? "bg-primary text-white shadow-md shadow-primary/20"
+                    : "bg-zinc-50 border border-zinc-100 text-zinc-600 hover:bg-zinc-100"
                     }`}
                 >
                   {industry}

@@ -32,7 +32,7 @@ export default function FAQs() {
         <div className="container relative z-10 mx-auto px-4 md:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Frequently Asked Questions</h1>
           <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            Get answers to standard questions about our products, quality testing, custom designsand orders.
+            Get answers to standard questions about our products, quality testing, custom designs and orders.
           </p>
         </div>
       </section>
@@ -62,8 +62,8 @@ export default function FAQs() {
                     setExpandedIndex(null); // Reset expand on category switch
                   }}
                   className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${activeCategory === cat
-                      ? "bg-primary text-white shadow-sm"
-                      : "bg-white border border-zinc-200 text-zinc-600 hover:bg-zinc-100"
+                    ? "bg-primary text-white shadow-sm"
+                    : "bg-white border border-zinc-200 text-zinc-600 hover:bg-zinc-100"
                     }`}
                 >
                   {cat}

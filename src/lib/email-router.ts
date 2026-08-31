@@ -78,7 +78,7 @@ export async function handleContactForm(req: any, res: any) {
       const { name, company, email, phone, interest, message } = data;
       if (!name || !email || !message) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Name, emailand message are required fields' }));
+        res.end(JSON.stringify({ error: 'Name, email and message are required fields' }));
         return;
       }
 
