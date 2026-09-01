@@ -39,7 +39,7 @@ export const companyInfo = {
   whatsapp: "+91 73537 75422",
   email: "info@sbtechindia.com",
   website: "www.sbtechindia.com",
-  address: "#4, 9th Main, J.C. Industrial Estate, Yelachenahalli, Kanakapura Main Road, Bangalore – 560062, Karnataka, India",
+  address: "#4, 9th Main, J.C. Industrial Estate, Yelachenahalli,Kanakapura Main Road, Bangalore – 560062, Karnataka, India",
 };
 
 export const products = [

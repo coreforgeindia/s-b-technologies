@@ -234,6 +234,8 @@ export function useCompanyProfile() {
               p.phones.push('+91 73537 75422');
             }
           }
+          // Force the approved company address so the live site never shows stale data from the database
+          p.address = staticCompanyInfo.address;
           setProfile(p);
         } else {
           setProfile({
