@@ -235,7 +235,7 @@ export function useCompanyProfile() {
             }
           }
           // Force the approved company address so the live site never shows stale data from the database
-          p.address = staticCompanyInfo.address;
+          p.address = "#4, 9th Main, J.C. Industrial Estate, Yelachenahalli,Kanakapura Main Road, Bangalore – 560062, Karnataka, India";
           setProfile(p);
         } else {
           setProfile({
