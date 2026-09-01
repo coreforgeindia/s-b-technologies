@@ -118,7 +118,7 @@ const EMAIL_TEMPLATE = `<!DOCTYPE html>
           <tr>
             <td style="background-color: #f8fafc; padding: 25px 40px; border-top: 1px solid #eef2f5; border-bottom: 6px solid #0f2e5a; text-align: center;" class="content-padding">
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr><td align="center" style="font-size: 12px; color: #718096; line-height: 1.8;"><strong>S.B. Technologies</strong><br>Factory &amp; Office: #4, 9th Main, J.C. Industrial Estate, Kanakapura Main Road,<br>Bangalore – 560062, Karnataka, India<br>Phone: +91 98457 79326 | WhatsApp: +91 73537 75422 | Email: <a href="mailto:info@sbtechindia.com" style="color: #0082c8; text-decoration: none; font-weight: 600;">info@sbtechindia.com</a></td></tr>
+                <tr><td align="center" style="font-size: 12px; color: #718096; line-height: 1.8;"><strong>S.B. Technologies</strong><br>Factory &amp; Office: #4, 9th Main, J.C. Industrial Estate, Yelachenahalli, Kanakapura Main Road,<br>Bangalore – 560062, Karnataka, India<br>Phone: +91 98457 79326 | WhatsApp: +91 73537 75422 | Email: <a href="mailto:info@sbtechindia.com" style="color: #0082c8; text-decoration: none; font-weight: 600;">info@sbtechindia.com</a></td></tr>
                 <tr><td align="center" style="padding-top: 15px; font-size: 11px; color: #a0aec0;">You are receiving this email because you submitted an inquiry on our website.</td></tr>
               </table>
             </td>

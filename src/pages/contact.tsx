@@ -269,6 +269,7 @@ export default function Contact() {
                                 <SelectItem value="bga">BGA / QFP / QFN Assembly</SelectItem>
                                 <SelectItem value="cad">PCB CAD & CAM Design</SelectItem>
                                 <SelectItem value="prototype">Prototype & Rework</SelectItem>
+                                <SelectItem value="design-support">Design Support & Product Development</SelectItem>
                                 <SelectItem value="other">Other / General Inquiry</SelectItem>
                               </SelectContent>
                             </Select>
