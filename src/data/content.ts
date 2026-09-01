@@ -39,7 +39,7 @@ export const companyInfo = {
   whatsapp: "+91 73537 75422",
   email: "info@sbtechindia.com",
   website: "www.sbtechindia.com",
-  address: "#4, 9th Main, J.C. Industrial Estate, Yelachenahalli,Kanakapura Main Road, Bangalore – 560062, Karnataka, India",
+  address: "#4, 9th Main, J.C. Industrial Estate, Yelachenahalli, Kanakapura Main Road, Bangalore – 560062, Karnataka, India",
 };
 
 export const products = [
@@ -269,6 +269,7 @@ export const projects = [
 ];
 
 export const faqs = [
+  { category: "Quality", question: "Do you support Warranty on your supplied PCB's?", answer: "Yes, we support Warranty on all our supplied products with unconditional service support." },
   { category: "Services", question: "What SMT component sizes can you handle?", answer: "Our Pick-and-Place Machine can place components as small as 0402 packages. We routinely handle 0603 size Chip Components and larger size IC's of 50 mm , as well as fine-pitch ICs down to 0.3 mm pitch." },
   { category: "Services", question: "Do you handle both through-hole and SMD assembly?", answer: "Yes. We offer complete through-hole, SMDand mixed-technology PCB assembly. Our wave soldering and selective soldering capabilities handle through-hole components, while our SMT line handles surface mount devices." },
   { category: "Services", question: "What PCB design tools do you support?", answer: "Our in-house CAD/CAM team works with OrCAD, PCAD, PADSand Altium Designer. We accept design files in all standard formats including ODB++, Gerber RS-274Xand IPC-2581." },
@@ -278,8 +279,7 @@ export const faqs = [
   { category: "Capabilities", question: "Can you assemble BGA and Micro BGA packages?", answer: "Yes. We have extensive experience with BGA, Micro BGA, QFP, QFNand DFN packages. Our X-ray inspection system verifies solder joint integrity beneath BGA components." },
   { category: "Capabilities", question: "Do you support prototype and low-volume runs?", answer: "Absolutely. We offer rapid-turn prototype assembly with typical turnaround of 3–5 working days. We also handle medium and high-volume production with dedicated SMT lines." },
   { category: "Ordering", question: "What is your typical lead time?", answer: "Prototype orders typically ship in 3–5 working days. Production orders depend on volume and component availability, typically 2–4 weeks. Contact us for a precise timeline based on your BOM and quantities." },
-  { category: "Ordering", question: "How do I request a quotation?", answer: "Send us your Gerber files, BOM (Bill of Materials)and assembly drawings via the Contact page or email us at info@sbtechindia.com. Include quantity, any special requirementsand desired delivery date." },
-  { category: "Quality", question: "Do you support Warranty on your supplied PCB's?", answer: "Yes, we support Warranty on all our supplied products with unconditional service support." }
+  { category: "Ordering", question: "How do I request a quotation?", answer: "Send us your Gerber files, BOM (Bill of Materials)and assembly drawings via the Contact page or email us at info@sbtechindia.com. Include quantity, any special requirementsand desired delivery date." }
 ];
 
 export const resources = [

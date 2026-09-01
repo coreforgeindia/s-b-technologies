@@ -412,7 +412,7 @@ INSERT INTO company_profile (id, name, tagline, established, certifications, pho
   ARRAY['+91 98457 79326', '+91 73537 75422'],
   'info@sbtechindia.com',
   'www.sbtechindia.com',
-  '#4, 9th Main, J.C. Industrial Estate, Yelachenahalli,Kanakapura Main Road, Bangalore – 560062, Karnataka, India',
+  '#4, 9th Main, J.C. Industrial Estate, Yelachenahalli, Kanakapura Main Road, Bangalore – 560062, Karnataka, India',
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6!2d77.56!3d12.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzEyLjAiTiA3N8KwMzMnMzYuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin'
 ) ON CONFLICT (id) DO NOTHING;
 
